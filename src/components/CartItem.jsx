@@ -18,12 +18,12 @@ const CartItem = ({item, itemIndex}) => {
         <div className="">
           <img className="" src={item.image} />
         </div>
-        <div className="md:ml-10 self-start space-y-5 w-[100%] md:w-[70%]">
-          <h1 className="text-xl text-slate-700 font-semibold">{item.title}</h1>
-          <h1 className="text-base text-slate-700 font-medium">{item.description}</h1>
-          <div className="flex items-center justify-between">
-            <p className="font-bold text-lg text-green-600">{item.price}</p>
-            <div className="text-red-800  bg-red-200 group hover:bg-red-400 transition-transform duration-300 cursor-pointer rounded-full p-3 mr-3"
+        <div className="">
+          <h1 className="">{item.title}</h1>
+          <h1 className="">{item.description}</h1>
+          <div className="">
+            <p className="">{item.price}</p>
+            <div className=""
             onClick={removeFromCart}>
               <AiFillDelete/>
             </div>
