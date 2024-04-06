@@ -13,7 +13,7 @@ const Cart = () => {
   }, [cart]);
 
   return (
-    <div >
+    <div className="mt-[7rem]" >
       {cart.length > 0 ? (
         <div className="">
           <div className="">
