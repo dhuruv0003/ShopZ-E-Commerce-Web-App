@@ -28,7 +28,7 @@ const Home = () => {
   },[])
 
   return (
-    <div className="mt-[10rem]">
+    <div className="mt-[7rem]">
       {
         loading ? <Spinner />  :
         posts.length > 0 ? 
