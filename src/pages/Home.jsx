@@ -32,7 +32,7 @@ const Home = () => {
       {
         loading ? <Spinner />  :
         posts.length > 0 ? 
-        (<div className=" transition-all duration-300 ease-in grid grid-cols-1 sm-grid-cols-2 md:grid-cols-3  lg:grid-cols-4 max-w-6xl p-2 mx-auto space-y-10 md:space-x-5 md:px-5">
+        (<div className=" transition-all duration-300 ease-in-out grid grid-cols-1 sm-grid-cols-2 md:grid-cols-3  lg:grid-cols-4 max-w-6xl p-2 mx-auto space-y-10 md:space-x-5 md:px-5">
           {
             posts.map( (post) => (
             <Product key = {post.id} post={post}/>

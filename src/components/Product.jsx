@@ -29,20 +29,20 @@ const Product = ({post}) => {
         <img src={post.image} className="h-full w-full" />
       </div>
 
-      <div className="flex justify-between gap-11">
+      <div className="flex justify-between gap-7 ">
         <div>
-          <p className=" text-green-600 font-bold text-2xl">${post.price}</p>
+          <p className=" text-green-600 font-bold text-2xl">₹{post.price}</p>
         </div>
         
         {
           cart.some((p) => p.id === post.id) ?
           (<button
-          className="text-gray-700 border-2 border-gray-700  rounded-full bg-white hover:bg-black p-1 px-3 transition duration-300 ease-in-out hover:text-white "
+          className="text-gray-700 border-2 border-gray-700  rounded-full bg-white hover:bg-black p-1 px-3 transition duration-300 ease-in-out hover:text-white text-xs font-bold  "
           onClick={removeFromCart}>
             Remove Item
           </button>) :
           (<button
-          className="text-gray-700 border-2 border-gray-700  rounded-full px-2 p-1"
+          className="text-gray-700 border-2 border-gray-700 text-xs font-bold rounded-full px-2 p-1"
           onClick={addToCart}>
             Add to Cart
           </button>)
