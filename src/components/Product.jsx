@@ -18,15 +18,15 @@ const Product = ({post}) => {
   }
 
   return (
-    <div className="">
+    <div className="flex flex-col items-center justify-between hover:shadow-[0_20px_50px_rgba(8,_100,_104,_0.2)] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-xl transition duration-300 ease-in gap-3 p-4 mt-10 ml-5 hover:scale-105 ">
       <div>
-        <p className="">{post.title}</p>
+        <p className="text-gray-700 font-bold text-lg text-left truncate w-40 mt-1">{post.title}</p>
       </div>
       <div>
-        <p className="">{post.description.split(" ").slice(0,10).join(" ") + "..."}</p>
+        <p className="w-40 text-gray-600 font-normal text-[14px] text-left  ">{post.description.split(" ").slice(0,10).join(" ")+"..."}</p>
       </div>
-      <div className="">
-        <img src={post.image} className="" />
+      <div className="h-[180px]">
+        <img src={post.image} className="h-full w-full" />
       </div>
 
       <div className="">
