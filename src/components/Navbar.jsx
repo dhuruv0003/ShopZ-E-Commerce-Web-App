@@ -8,27 +8,26 @@ const Navbar = () => {
 
   return (
     <div >
-      <nav className="flex justify-between items-center h-20 max-w-6xl mx-auto">
+      <nav className="">
 
         <NavLink to="/">
-          <div className="ml-5">
-          <img src="../logo.png" className="h-14"/>
+          <div className="">
+          <img src="../logo.png" className=""/>
           </div>
         </NavLink>
 
-          <div className="flex items-center font-medium text-slate-100 mr-5 space-x-6">
+          <div className="">
             <NavLink to="/">
               <p>Home</p>
             </NavLink>
 
             <NavLink to="/cart">
-              <div className="relative">
-                  <FaShoppingCart className="text-2xl"/>
+              <div className="">
+                  <FaShoppingCart className=""/>
                   {
                     cart.length > 0 &&
                     <span
-                    className="absolute -top-1 -right-2 bg-green-600 text-xs w-5 h-5 flex 
-                    justify-center items-center animate-bounce rounded-full text-white" 
+                    className="" 
                     >{cart.length}</span>
                   }
                   
