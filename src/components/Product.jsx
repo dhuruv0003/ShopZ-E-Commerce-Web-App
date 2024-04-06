@@ -18,7 +18,7 @@ const Product = ({post}) => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-between hover:shadow-[0_20px_50px_rgba(8,_100,_104,_0.2)] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-xl transition duration-300 ease-in-out  gap-3 p-4 mt-10 mx-3 hover:scale-105">
+    <div className="flex flex-col items-center justify-between hover:shadow-[0_20px_50px_rgba(8,_100,_104,_0.2)] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-xl transition duration-300 ease-in-out  gap-3 p-4 mt-10 mx-2 hover:scale-105">
       <div>
         <p className="text-gray-700 font-bold text-lg text-left truncate w-40 mt-1">{post.title}</p>
       </div>
@@ -35,14 +35,14 @@ const Product = ({post}) => {
         </div>
         
         {
-          cart.some((p) => p.id == post.id) ?
+          cart.some((p) => p.id === post.id) ?
           (<button
-          className=""
+          className="text-gray-700 border-2 border-gray-700  rounded-full bg-white hover:bg-black p-1 px-3 transition duration-300 ease-in-out hover:text-white "
           onClick={removeFromCart}>
             Remove Item
           </button>) :
           (<button
-          className=""
+          className="text-gray-700 border-2 border-gray-700  rounded-full px-2 p-1"
           onClick={addToCart}>
             Add to Cart
           </button>)

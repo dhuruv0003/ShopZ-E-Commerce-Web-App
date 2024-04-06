@@ -24,7 +24,7 @@ const Cart = () => {
 
           <div className="">
             <div className="">
-            <div className="">
+            <div className=" ">
             <div className="">Your Cart</div>
               <div className="">Summary</div>
               <p className="">
