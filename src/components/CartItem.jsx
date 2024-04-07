@@ -13,14 +13,14 @@ const CartItem = ({item, itemIndex}) => {
   }
 
   return (
-    <div className=" ">
+    <div className="w-3/4 flex flex-col justify-between items-center  ">
       <div className="">
-        <div className="">
-          <img className="" src={item.image} />
+        <div className="h-[180px]">
+          <img className="h-full" src={item.image} />
         </div>
-        <div className="">
-          <h1 className="">{item.title}</h1>
-          <h1 className="">{item.description}</h1>
+        <div className="text-justify">
+          <h1 className="">{item.title.split(" ").slice(0,6).join(" ")+".."}</h1>
+          <h1 className="">{item.description.split(" ").slice(0,7).join(" ")+"..."}</h1>
           <div className="">
             <p className="">{item.price}</p>
             <div className=""
@@ -28,6 +28,7 @@ const CartItem = ({item, itemIndex}) => {
               <AiFillDelete/>
             </div>
           </div>
+          <div className="w-full h-1 my-4 bg-black"></div>
 
         </div>
 

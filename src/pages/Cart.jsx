@@ -13,24 +13,24 @@ const Cart = () => {
   }, [cart]);
 
   return (
-    <div className="mt-[7rem]" >
+    <div className="mt-[7rem] w-[100vw] h-fit mx-auto" >
       {cart.length > 0 ? (
-        <div className="">
+        <div className="flex items-center justify-evenly w-[100vw]">
           <div className="">
             {cart.map((item, index) => {
               return <CartItem key={item.id} item={item} itemIndex={index} />;
             })}
           </div>
 
-          <div className="">
+          <div className="flex flex-col items-center justify-around min-h-[100%]">
             <div className="">
-            <div className=" ">
-            <div className="">Your Cart</div>
-              <div className="">Summary</div>
-              <p className="">
-                <span className="">Total Items: {cart.length}</span>
-              </p>
-            </div>
+              <div className=" ">
+                <div className="">Your Cart</div>
+                <div className=" uppercase font-extrabold text-green-600 text-3xl">Summary</div>
+                <p className="">
+                  <span className="">Total Items: {cart.length}</span>
+                </p>
+              </div>
             </div>
 
             <div className="">
@@ -40,12 +40,12 @@ const Cart = () => {
           </div>
         </div>
       ) : (
-        <div className="">
-          <h1 className="">
+        <div className="flex flex-col items-center justify-center gap-2 h-[500px]">
+          <h1 className="text-xl font-bold text-blue-900">
             Your cart is empty!
           </h1>
           <Link to={"/"}>
-            <button className="">
+            <button className="text-gray-700 border-2 border-gray-700  rounded-full bg-white hover:bg-green-600 p-1 px-3 transition duration-300 ease-in-out hover:text-white text-lg font-bold  ">
               Shop Now
             </button>
           </Link>
