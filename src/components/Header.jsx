@@ -27,16 +27,21 @@ export default function Header({ posts }) {
         },
 
     ];
-    return (<div className="w-[100%] overflow-x-hidden sm:h-[80vh] flex justify-center items-center rounded-b-[20%] border-b-8 border-black bg-slate-600 my-[5rem]">
+    return (<div className="w-[100%] overflow-x-hidden sm:h-[80vh] flex justify-center items-center rounded-b-[20%] border-b-8 border-black bg-slate-600 my-[5rem] space-x-6 ">
 
-        <div className="rounded-full">
-            <SimpleImageSlider
-                width={800}
-                height={550}
+        <div className="rounded-full ">
+            <SimpleImageSlider 
+                width={500}
+                height={450}
                 images={sliderImages}
                 showNavs={true}
-
+                autoPlay={true}
+                showBullets={true}
+                style={{ borderRadius : "2rem" }}
             />
+        </div>
+        <div className="w-[25%] font-bold text-white text-3xl ">
+            <p>dkjfbgxhjbgfxjdbgfjkdbfgxjdf</p>
         </div>
     </div>)
 }
