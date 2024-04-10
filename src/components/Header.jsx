@@ -40,6 +40,5 @@ export default function Header({ posts }) {
                 style={{ borderRadius : "2rem" }}
             />
         </div>
-        
     </div>)
 }
