@@ -40,8 +40,6 @@ export default function Header({ posts }) {
                 style={{ borderRadius : "2rem" }}
             />
         </div>
-        <div className="w-[25%] font-bold text-white text-3xl ">
-            <p>dkjfbgxhjbgfxjdbgfjkdbfgxjdf</p>
-        </div>
+        
     </div>)
 }
