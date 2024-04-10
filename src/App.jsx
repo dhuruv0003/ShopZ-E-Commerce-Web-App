@@ -9,6 +9,7 @@ const App = () => {
     <div className="bg-slate-900 z-50 w-full fixed top-0">
       <Navbar />
     </div>
+    
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/cart" element={<Cart />} />
