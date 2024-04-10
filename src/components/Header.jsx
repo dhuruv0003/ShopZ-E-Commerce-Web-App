@@ -37,7 +37,7 @@ export default function Header({ posts }) {
                 showNavs={true}
                 autoPlay={true}
                 showBullets={true}
-                
+                style={{ borderRadius : "2rem" }}
             />
         </div>
     </div>)
