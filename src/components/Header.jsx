@@ -1,5 +1,6 @@
 
-import SimpleImageSlider from "react-simple-image-slider"
+import SlideShow from "./SlideShow";
+
 
 export default function Header({ posts }) {
     const sliderImages = [
@@ -27,18 +28,11 @@ export default function Header({ posts }) {
         },
 
     ];
-    return (<div className="w-[100%] overflow-x-hidden sm:h-[80vh] flex justify-center items-center rounded-b-[20%] border-b-8 border-black bg-slate-600 my-[5rem] space-x-6 ">
-
-        <div className="rounded-full ">
-            <SimpleImageSlider 
-                width={500}
-                height={450}
-                images={sliderImages}
-                showNavs={true}
-                autoPlay={true}
-                showBullets={true}
-                style={{ borderRadius : "2rem" }}
-            />
+    return (<div className="w-[100%] overflow-x-hidden sm:h-[80vh] flex justify-center  rounded-b-[20%] border-b-8 border-black bg-slate-600 my-[5rem] space-x-6 ">
+        <div className="rounded-full flex flex-col gap-6">
+            <h1 className="text-7xl text-white" >Hey GenZ Welcome To </h1>
+            <h1 className="text-9xl text-white text-center">ShopZ</h1>
         </div>
+        <SlideShow/>
     </div>)
 }
