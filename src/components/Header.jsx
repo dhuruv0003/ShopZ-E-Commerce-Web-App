@@ -18,7 +18,7 @@ export default function Header({ data }) {
                     {
                         data.map((slide) => {
                             return (
-                                <div className="w-[23%]"><SlideShow key={slide.id}
+                                <div className="w-[100%] lg:w-[24%]"><SlideShow key={slide.id}
                                     {...slide} /></div>
 
 
