@@ -1,38 +1,34 @@
 
 import SlideShow from "./SlideShow";
 
+import { useState } from "react";
 
-export default function Header({ posts }) {
-    const sliderImages = [
+export default function Header({ data }) {
 
-        {
-            url: "src/assets/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
-        },
-        {
-            url: "src/assets/71YXzeOuslL._AC_UY879_.jpg",
-        },
-        {
-            url: "src/assets/71YXzeOuslL._AC_UY879_.jpg",
-        },
-        {
-            url: "src/assets/71YXzeOuslL._AC_UY879_.jpg",
-        },
-        {
-            url: "src/assets/71YXzeOuslL._AC_UY879_.jpg",
-        },
-        {
-            url: "src/assets/71YXzeOuslL._AC_UY879_.jpg",
-        },
-        {
-            url: "src/assets/71YXzeOuslL._AC_UY879_.jpg",
-        },
 
-    ];
-    return (<div className="w-[100%] overflow-x-hidden sm:h-[80vh] flex justify-center  rounded-b-[20%] border-b-8 border-black bg-slate-600 my-[5rem] space-x-6 ">
-        <div className="rounded-full flex flex-col gap-6">
-            <h1 className="text-7xl text-white" >Hey GenZ Welcome To </h1>
-            <h1 className="text-9xl text-white text-center">ShopZ</h1>
-        </div>
-        <SlideShow/>
-    </div>)
+
+    return (
+        <div className="w-[100%] overflow-x-hidden sm:h-[100vh] flex justify-center  rounded-b-[20%] border-b-8 border-black bg-slate-600 my-[5rem] space-x-6 px-8">
+            <div className="rounded-full flex flex-col gap-6  max-w-[1200px] mx-auto justify-evenly items-center">
+                <div className=" h-fit flex-col bg-white rounded-full text-slate-800 w-full p-5 flex gap-4">
+                    <h1 className=" text-center text-3xl " >Hey GenZ Welcome To </h1>
+                    <h1 className="text-8xl  text-center">ShopZ</h1></div>
+                <div className="text-center flex flex-wrap  text-black gap-3">
+
+                    {
+                        data.map((slide) => {
+                            return (
+                                <div className="w-[23%]"><SlideShow key={slide.id}
+                                    {...slide} /></div>
+
+
+                            )
+                        })
+                    }
+
+                </div>
+            </div>
+
+
+        </div>)
 }

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Spinner from "../components/Spinner";
 import Product from "../components/Product";
 import Headers from "../components/Header";
+import data from "./data";
 
 const Home = () => {
   const API_URL = "https://fakestoreapi.com/products";
@@ -30,7 +31,7 @@ const Home = () => {
 
   return (
     <div className="">
-      <Headers posts={posts}/>
+      <Headers data={data}/>
       {
         loading ? <Spinner />  :
         posts.length > 0 ? 
