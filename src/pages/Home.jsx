@@ -32,6 +32,7 @@ const Home = () => {
   return (
     <div className="">
       <Headers data={data}/>
+      <div className="w-[70%] mx-auto h-1 bg-slate-700 shadow-black shadow-md"></div>
       {
         loading ? <Spinner />  :
         posts.length > 0 ? 
