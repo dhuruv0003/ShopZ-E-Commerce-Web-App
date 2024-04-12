@@ -9,11 +9,11 @@ const Navbar = () => {
 
     return (
         <div >
-            <nav className="flex justify-between items-center h-20 max-w-6xl mx-auto">
+            <nav className="flex justify-between items-center h-24 max-w-6xl mx-auto">
 
                 <NavLink to="/">
-                    <div className="ml-5">
-                        <img src={logo} className="h-14" />
+                    <div className="ml-5 ">
+                        <img src={logo} className=" shadow-slate-900 shadow-md  h-[80px] w-[130px] rounded-es-3xl rounded-se-3xl " />
                     </div>
                 </NavLink>
 

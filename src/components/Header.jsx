@@ -8,17 +8,18 @@ export default function Header({ data }) {
 
 
     return (
-        <div className="w-[100%] overflow-x-hidden sm:h-[100vh] flex justify-center  rounded-b-[20%] border-b-8 border-black bg-slate-600 my-[5rem] space-x-6 px-8">
-            <div className="rounded-full flex flex-col gap-6  max-w-[1200px] mx-auto justify-evenly items-center">
-                <div className=" h-fit flex-col shadow-white shadow-lg bg-white   w-full p-9 flex gap-4 my-5">
-                    <h1 className=" text-center text-3xl font-bold text-orange-500 " >Hey GenZ Welcome To </h1>
-                    <h1 className="text-8xl  text-center text-pink-500 font-bold">ShopZ</h1></div>
+        <div className="w-[100%] overflow-x-hidden sm:h-[100vh] flex justify-center  rounded-b-[20%] border-b-8 border-black  bg-gradient-to-r from-red-200 to-purple-400  my-[6rem] space-x-6 px-8">
+            <div className="rounded-full flex flex-col gap-6  max-w-[1200px] mx-auto justify-evenly items-center" >
+                <div className=" h-fit flex-col shadow-black shadow-lg bg-white   w-full p-14 flex gap-4 my-5 bg-contain bg-fixed transition-all duration-300 ease-in-out " style={{backgroundImage: `url(${"src/assets/header.a6837f08.webp"})`}}>
+                    <h1 className=" text-center text-3xl font-bold bg-gradient-to-r from-red-200 to-purple-100 text-transparent bg-clip-text" >Hey GenZ Welcome To SHOPZ</h1>
+                    <h1 className="text-5xl  text-center text-white font-bold">The One And Only Solution of All Your needs</h1></div>
+
                 <div className="text-center flex flex-wrap  text-black gap-3">
-            
-                 {
+
+                    {
                         data.map((slide) => {
                             return (
-                                <div className="w-[90%] mx-auto lg:w-[24%]"><SlideShow key={slide.id}
+                                <div className="w-[90%] mx-auto lg:w-[24%] "><SlideShow key={slide.id}
                                     {...slide} /></div>
                             )
                         })
