@@ -32,7 +32,7 @@ const Home = () => {
   return (
     <div className="">
       <Headers data={data}/>
-      <div className="w-[70%] mx-auto h-1 bg-slate-700 shadow-black shadow-md"></div>
+      <div className="w-[70%]  mb-6 mx-auto h-1 bg-purple-300 rounded-full shadow-black shadow-md"></div>
       {
         loading ? <Spinner />  :
         posts.length > 0 ? 
