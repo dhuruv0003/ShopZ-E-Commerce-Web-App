@@ -6,7 +6,7 @@ import Cart from "./pages/Cart"
 
 const App = () => {
   return (<div>
-    <div className="bg-gradient-to-r from-violet-600 to-indigo-600 shadow-black shadow-lg  z-50 w-full fixed top-0">
+    <div className="bg-gradient-to-r from-pink-100 to-indigo-500 shadow-black shadow-lg  z-50 w-full fixed top-0">
       <Navbar />
     </div>
     
