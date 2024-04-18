@@ -36,3 +36,8 @@
 .prod{
   margin-left: 0;
 }
+
+.gradient-border{
+  border-radius: 5rem;
+ 
+}

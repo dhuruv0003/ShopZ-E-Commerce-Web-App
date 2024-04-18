@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Spinner from "../components/Spinner";
 import Product from "../components/Product";
 import Headers from "../components/Header";
 import data from "./data";
 
-const Home = () => {
+const Home = ({ isDarkMode, setDarkMode, toggleDarkMode }) => {
   const API_URL = "https://fakestoreapi.com/products";
   const [loading, setLoading] = useState(false);
   const [posts, setPosts] = useState([]);
@@ -12,40 +12,40 @@ const Home = () => {
   async function fetchProductData() {
     setLoading(true);
 
-    try{
+    try {
       const res = await fetch(API_URL);
       const data = await res.json();
 
       setPosts(data);
     }
-    catch(error) {
+    catch (error) {
       console.log("Error aagya ji");
       setPosts([]);
     }
     setLoading(false);
   }
 
-  useEffect( () => {
+  useEffect(() => {
     fetchProductData();
-  },[])
-
+  }, [])
+  
   return (
     <div className="">
-      <Headers data={data}/>
+      <Headers isDarkMode={isDarkMode} setDarkMode={setDarkMode} toggleDarkMode={toggleDarkMode} data={data} />
       <div className="w-[70%]  mb-6 mx-auto h-1 bg-purple-300 rounded-full shadow-black shadow-md"></div>
       {
-        loading ? <Spinner />  :
-        posts.length > 0 ? 
-        (<div className=" transition-all duration-300 ease-in-out grid grid-cols-1 sm-grid-cols-2 md:grid-cols-3  lg:grid-cols-4 max-w-6xl p-2 mx-auto space-y-10 md:space-x-5 md:px-5">
-          {
-            posts.map( (post) => (
-            <Product key = {post.id} post={post}/>
-          ) )
-          }
-        </div>) :
-        <div className="flex justify-center items-center">
-          <p>No Data Found</p>
-        </div> 
+        loading ? <Spinner /> :
+          posts.length > 0 ?
+            (<div className=" transition-all duration-300 ease-in-out grid grid-cols-1 sm-grid-cols-2 md:grid-cols-3  lg:grid-cols-4 max-w-6xl p-2 mx-auto space-y-10 md:space-x-5 md:px-5">
+              {
+                posts.map((post) => (
+                  <Product key={post.id} post={post} />
+                ))
+              }
+            </div>) :
+            <div className="flex justify-center items-center">
+              <p>No Data Found</p>
+            </div>
       }
     </div>
   );
