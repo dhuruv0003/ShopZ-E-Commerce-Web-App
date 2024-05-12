@@ -1,13 +1,16 @@
 import { FaShoppingCart } from "react-icons/fa"
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import logo from "../assets/logo.png"
+import logo from "../assets/download.png"
 import { useState } from "react";
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import { AppContext } from "../Context/AppContext";
+import { useContext } from "react";
+import toast from "react-hot-toast";
+const Navbar = () => {
 
-const Navbar = ({isDarkMode,setDarkMode,toggleDarkMode}) => {
-    
-    
+    const {isloggedin , setisloggedin}=useContext(AppContext)
+    const { isDarkMode, setDarkMode, toggleDarkMode }=useContext(AppContext);
     const { cart } = useSelector((state) => state);
 
     return (
@@ -24,8 +27,22 @@ const Navbar = ({isDarkMode,setDarkMode,toggleDarkMode}) => {
                     <NavLink to="/">
                         <p>Home</p>
                     </NavLink>
-
+                    {
+                     !isloggedin &&   <NavLink to='/login'>Login</NavLink>
+                    }
+                    {
+                        isloggedin &&
+                        <NavLink to='/login' onClick={()=>{
+                            setisloggedin(false)
+                            toast.error("Logged Out")
+                        }}>LogOut</NavLink>
+                        }
+                    {
+                        !isloggedin &&
+                        <NavLink to='/signup'>Signup</NavLink>
+                    }
                     <NavLink to="/cart">
+
                         <div className="relative">
                             <FaShoppingCart className="text-2xl" />
                             {
@@ -36,7 +53,6 @@ const Navbar = ({isDarkMode,setDarkMode,toggleDarkMode}) => {
                         </div>
                     </NavLink>
                     <DarkModeSwitch
-                       
                         checked={isDarkMode}
                         onChange={toggleDarkMode}
                         size={30}
