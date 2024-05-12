@@ -12,7 +12,7 @@ import ProductItem from "./components/ProductItem";
 const App = () => {
   const { isDarkMode, setDarkMode, toggleDarkMode }=useContext(AppContext);
   return (<div>
-    <div className={`${isDarkMode ?'bg-gradient-to-r from-slate-100 to-blue-950 shadow-black shadow-lg  z-50 w-full fixed top-0': 'bg-gradient-to-r from-pink-100 to-indigo-500 shadow-black shadow-lg  z-50 w-full fixed top-0'}`}>
+    <div className={`${isDarkMode ?'bg-gradient-to-r from-slate-400 to-slate-950 shadow-slate-900 shadow-lg  z-50 w-full fixed top-0': 'bg-gradient-to-r from-pink-100 to-indigo-500 shadow-black shadow-lg  z-50 w-full fixed top-0'}`}>
       <Navbar />
     </div>
     
