@@ -8,6 +8,7 @@ import { AppContext } from "./Context/AppContext";
 import { useContext } from "react";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import ProductItem from "./components/ProductItem";
 const App = () => {
   const { isDarkMode, setDarkMode, toggleDarkMode }=useContext(AppContext);
   return (<div>
@@ -21,7 +22,7 @@ const App = () => {
       
       <Route path='/login' element={<Login/>}/>
       <Route path='/signup' element={<Signup/>}/>
-      <Route path="/productItem"></Route>
+      <Route path="/productItem" element={<ProductItem/>}></Route>
     </Routes>
   </div>
   )

@@ -1,12 +1,17 @@
 import { toast } from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { add, remove } from "../redux/Slices/CartSlice";
-import { useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 
+import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { AppContext } from "../Context/AppContext";
 const Product = ({ post }) => {
 
   const { cart } = useSelector((state) => state);
   const dispatch = useDispatch();
+
+  const {product,setProduct}=useContext(AppContext)
 
   const addToCart = () => {
     dispatch(add(post));
@@ -17,7 +22,7 @@ const Product = ({ post }) => {
     dispatch(remove(post.id));
     toast.error("Item removed from Cart");
   }
-  const navigate=useNavigate();
+
 
   return (
     <div className="flex flex-col items-center justify-between bg-white hover:shadow-[0_20px_50px_rgba(8,_100,_104,_0.2)] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-xl transition duration-300 ease-in-out  gap-3 p-4 mt-10 mx-2 hover:scale-105">
@@ -31,11 +36,12 @@ const Product = ({ post }) => {
         <img src={post.image} className="h-full w-full" />
       </div>
       <p className=" text-green-600 font-bold text-2xl">${post.price}</p>
+
       <div className="flex justify-between gap-7 ">
         <div>
-          <button className="text-gray-700 border-2 border-gray-700 text-xs font-bold rounded-full px-2 p-1" onClick={()=>{navigate("/productItem")
-            post={post}
-          }}>Buy Now</button>
+          <NavLink to="/productItem">
+            <button className="text-gray-700 border-2 border-gray-700 text-xs font-bold rounded-full px-2 p-1" onClick={()=>setProduct(post)} >Buy Now</button>
+          </NavLink>
         </div>
 
         {

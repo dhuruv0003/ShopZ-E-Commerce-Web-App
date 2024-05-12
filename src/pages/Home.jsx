@@ -56,6 +56,7 @@ const Home = () => {
               {
                 getCategory().map((post) => (
                   <Product key={post.id} post={post} />
+                  
                 ))
               }
             </div>) :
