@@ -52,7 +52,7 @@ export default function ProductItem() {
     };
 
     return (
-        <div className='mt-[10rem]  max-w-[1000px] mx-auto flex flex-wrap justify-center gap-[5rem] '>
+        <div className='py-[10rem] px-[2rem] max-w-[1000px] mx-auto flex flex-wrap justify-center gap-[5rem] bg-gradient-to-r  from-blue-100 to-purple-200  h-fit '>
 
             <div className="sm:w-[30%]">
                 <img src={product.image} className="h-[400px] w-[350px]" />
@@ -81,7 +81,7 @@ export default function ProductItem() {
 
             </div>
 
-            <div className="w-3/4 ">
+            <div className="w-3/4 h-[400px]">
                 <Slider {...settings}>
                     {
                         data.map((slide, index) => {
