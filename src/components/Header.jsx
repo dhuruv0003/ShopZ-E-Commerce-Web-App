@@ -21,14 +21,13 @@ export default function Header({ data }) {
 
     };
 
-    const { isDarkMode, setDarkMode, toggleDarkMode } = useContext(AppContext)
+    const { isDarkMode} = useContext(AppContext)
     return (
         <div className={`${isDarkMode ? "bg-gradient-to-r border-b-8  border-purple-400 from-slate-500 to-black" : "bg-gradient-to-r border-b-8 border-black from-blue-100 to-purple-300"} w-[100%] overflow-hidden flex justify-center  rounded-b-[20%] mb-[2rem] space-x-6 px-8`} >
             <div className="rounded-full flex flex-col gap-6  max-w-[1200px] mx-auto justify-evenly items-center" >
 
 
-
-                <div className="w-[300px] sm:w-[400px] md:w-[600px] my-[2rem] lg:w-[700px] xl:w-[900px] bg-transparent ">
+                <div className="w-[400px] sm:w-[400px] md:w-[600px] my-[2rem] lg:w-[700px] xl:w-[900px] p-6 bg-transparent ">
                     <Slider {...settings}>
                         {
                             data.map((slide, index) => {
@@ -38,7 +37,6 @@ export default function Header({ data }) {
                                             {...slide} />
 
                                     </div>
-
                                 )
                             })
                         }
