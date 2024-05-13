@@ -13,7 +13,7 @@ const Cart = () => {
   }, [cart]);
 
   return (
-    <div className="mt-[6rem] px-3 mx-auto" >
+    <div className="mt-[6rem] bg-gradient-to-r from-blue-100 to-purple-300 px-3 mx-auto" >
       {cart.length > 0 ? (
         <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-center ">
           <div className="w-[100%] md:w-[60%] flex flex-col p-2">
@@ -40,12 +40,12 @@ const Cart = () => {
           </div>
         </div>
       ) : (
-        <div className="min-h-[80vh] flex flex-col items-center justify-center">
+        <div className="min-h-[90vh] flex flex-col items-center justify-center">
           <h1 className="text-gray-700 font-semibold text-xl mb-2">
             Your cart is empty!
           </h1>
           <Link to={"/"}>
-            <button className="uppercase bg-green-600 hover:bg-purple-50 rounded-lg text-white transition duration-300 ease-linear mt-5 border-2 border-green-600 font-semibold hover:text-green-700 p-3 px-10 tracking-wider ">
+            <button className="uppercase bg-[#5f154c] hover:bg-purple-50 rounded-lg text-white transition duration-300 ease-linear mt-5 border-2 border-purple-600 font-semibold hover:text-green-700 p-3 px-10 tracking-wider ">
               Shop Now
             </button>
           </Link>
