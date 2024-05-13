@@ -7,7 +7,7 @@ export default function Category() {
   const [hide,setHide]=useState(true)
   return (
     <div className=" mt-[6rem] relative py-7 sm:flex-col max-w-[800px] mx-auto flex justify-evenly items-center md:-left-[4rem]">
-      <div onClick={()=>setHide((prev)=>!prev)} className="absolute left-[1rem] text-2xl  flex  items-center gap-3 font-bold text-purple-500 cursor-pointer">
+      <div onClick={()=>setHide((prev)=>!prev)} className="absolute left-[1rem] text-2xl  flex  items-center gap-3 font-bold text-purple-400 cursor-pointer">
         <TfiMenu  className='text-4xl '/> Category
       </div>
       <div className={`${hide?"hidden":"sm:flex flex  top-[4rem] flex-col absolute z-10 transition-all duration-300   transition- gap-5 sm:justify-evenly sm:item-center left-2"}`}>
