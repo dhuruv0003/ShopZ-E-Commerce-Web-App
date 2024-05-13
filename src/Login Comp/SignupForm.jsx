@@ -110,7 +110,7 @@ export default function SignupForm() {
           </span>
         </label>
         <button className='
-                <button className="w-full mt-4 bg-[#5f154c] rounded-[8px] font-medium py-2 text-[#e6e6e6]'>Create Account</button>
+               w-full mt-4 bg-[#5f154c] rounded-[8px] font-medium py-2 text-[#e6e6e6]'>Create Account</button>
 
       </form>
 
