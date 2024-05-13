@@ -197,7 +197,7 @@ export default function ProductItem() {
 
 
                 </div>
-
+                <h1 className='text-3xl font-extrabold'>Items You may Also Like</h1>
                 <div className="w-3/4 h-[400px]">
                     <Slider {...settings}>
                         {

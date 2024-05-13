@@ -9,8 +9,8 @@ import { useContext } from "react";
 import toast from "react-hot-toast";
 const Navbar = () => {
 
-    const {isloggedin , setisloggedin}=useContext(AppContext)
-    const { isDarkMode, setDarkMode, toggleDarkMode }=useContext(AppContext);
+    const { isloggedin, setisloggedin } = useContext(AppContext)
+    const { isDarkMode, setDarkMode, toggleDarkMode } = useContext(AppContext);
     const { cart } = useSelector((state) => state);
 
     return (
@@ -28,21 +28,21 @@ const Navbar = () => {
                         <p>Home</p>
                     </NavLink>
                     {
-                     !isloggedin &&   <NavLink to='/login'>Login</NavLink>
+                        !isloggedin && <NavLink to='/login'>Login</NavLink>
                     }
                     {
                         isloggedin &&
-                        <NavLink to='/login' onClick={()=>{
+                        <NavLink to='/login' onClick={() => {
                             setisloggedin(false)
                             toast.error("Logged Out")
                         }}>LogOut</NavLink>
-                        }
+                    }
                     {
                         !isloggedin &&
                         <NavLink to='/signup'>Signup</NavLink>
                     }
 
-<NavLink to = "/contactus">Contact Us</NavLink>
+                    <NavLink to="/contactus">Contact Us</NavLink>
                     <NavLink to="/cart">
 
                         <div className="relative">
@@ -55,7 +55,7 @@ const Navbar = () => {
                         </div>
 
                     </NavLink>
-                    
+
                     <DarkModeSwitch
                         checked={isDarkMode}
                         onChange={toggleDarkMode}

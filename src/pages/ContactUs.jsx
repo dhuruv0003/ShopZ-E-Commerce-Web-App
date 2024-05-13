@@ -20,13 +20,13 @@ function changeHandler(event){
     <div className=' flex justify-center items-center h-screen'>
         <form onSubmit = {submitHandler} action = "" >
             <label className='flex flex-col'>Enter your Name
-                <input required type = "text" placeholder='Gungun Saluja' onChange={changeHandler} name = "name1"></input>
+                <input required type = "text" placeholder='' onChange={changeHandler} name = "name1"></input>
             </label>
             <label className='flex flex-col'>Enter  Phone number 
-                <input required type = "number" placeholder='999999999' onChange= {changeHandler} name = "phoneno"></input>
+                <input required type = "number" placeholder='' onChange= {changeHandler} name = "phoneno"></input>
             </label>
             <label className='flex flex-col'>Enter your email
-                <input required type = "email" placeholder='gundhuruv@7469.com' onChange={changeHandler} name = "email"></input>
+                <input required type = "email" placeholder='' onChange={changeHandler} name = "email"></input>
             </label>
             <label className='flex flex-col'>Enter your message
                 <textarea name = "message">message daal do </textarea>

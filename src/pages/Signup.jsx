@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Template from '../Login Comp/Template'
 import loginimg from "../assets/download.png"
+import { AppContext } from '../Context/AppContext'
 
 export default function Signup() {
-  return (
-    <div className="bg-gradient-to-r  from-blue-200 to-purple-100 py-[3rem]">
+  const {isDarkMode} = useContext(AppContext)
+   return (
+    <div className={`${is}`}>
       <Template
       title="Welcome TO shopz"
       desc="Shop For Your Loved Ones"
