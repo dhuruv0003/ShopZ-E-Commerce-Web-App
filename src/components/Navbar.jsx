@@ -41,6 +41,8 @@ const Navbar = () => {
                         !isloggedin &&
                         <NavLink to='/signup'>Signup</NavLink>
                     }
+
+<NavLink to = "/contactus">Contact Us</NavLink>
                     <NavLink to="/cart">
 
                         <div className="relative">
@@ -51,7 +53,9 @@ const Navbar = () => {
                             }
 
                         </div>
+
                     </NavLink>
+                    
                     <DarkModeSwitch
                         checked={isDarkMode}
                         onChange={toggleDarkMode}
