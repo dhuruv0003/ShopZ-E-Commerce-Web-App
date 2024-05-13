@@ -37,7 +37,7 @@ const Navbar = () => {
                 </div>
                 <TfiMenu onClick={()=>setHide((prev)=>!prev)}  className='xl:hidden relative font-extrabold text-4xl shadow-md  shadow-rose-950 bg-gradient-to-r from-pink-500 to-indigo-400 cursor-pointer'/>
 
-                <div className={`${hide?"hidden":"absolute flex flex-col  items-baseline justify-evenly font-bold right-3 xl:right-[12rem] top-[4.5rem] text-white max-w-[100px] mx-auto space-x-5"} transition-all duration-300 translate-y-2 xl:flex xl:items-center xl:gap-3 xl:font-bold xl:justify-center `}>
+                <div className={`${hide?"hidden":"absolute flex flex-col  items-baseline justify-evenly font-bold right-3 xl:right-[12rem] top-[4.5rem] text-white max-w-[100px] mx-auto space-x-5"} transition-translate transition-transform duration-300 translate-y-2 xl:flex xl:items-center xl:gap-3 xl:font-bold xl:justify-center `}>
                     {
                         !isloggedin &&
                         <NavLink to='/login' className="p-2 w-[90px] xl:bg-gradient-to-r xl:from-pink-100 xl:to-indigo-300  bg-gradient-to-r from-pink-500 to-indigo-400 border-[2px] rounded-lg">Login</NavLink>
@@ -46,8 +46,9 @@ const Navbar = () => {
                         isloggedin &&
                         <NavLink to='/' className="border-[2px] w-[90px] p-2 rounded-lg xl:bg-gradient-to-r xl:from-pink-100 xl:to-indigo-300 
                          bg-gradient-to-r from-pink-500 to-indigo-400" onClick={() => {
-                            setisloggedin(false)
                             toast.error("Logged Out")
+                            setisloggedin(false)
+                            
                             
                         }}>LogOut</NavLink>
                     }
