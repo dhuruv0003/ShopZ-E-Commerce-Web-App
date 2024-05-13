@@ -1,6 +1,6 @@
 import { FaShoppingCart } from "react-icons/fa"
 import { useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { NavLink, Navigate } from "react-router-dom";
 import logo from "../assets/download.png"
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import { AppContext } from "../Context/AppContext";
@@ -44,10 +44,11 @@ const Navbar = () => {
                     }
                     {
                         isloggedin &&
-                        <NavLink to='/login' className="border-[2px] w-[90px] p-2 rounded-lg xl:bg-gradient-to-r xl:from-pink-100 xl:to-indigo-300 
+                        <NavLink to='/' className="border-[2px] w-[90px] p-2 rounded-lg xl:bg-gradient-to-r xl:from-pink-100 xl:to-indigo-300 
                          bg-gradient-to-r from-pink-500 to-indigo-400" onClick={() => {
                             setisloggedin(false)
                             toast.error("Logged Out")
+                            
                         }}>LogOut</NavLink>
                     }
                     {
