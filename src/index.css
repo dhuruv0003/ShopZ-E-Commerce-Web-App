@@ -42,3 +42,13 @@
  
 }
 
+.style-image{
+  background-image: url("src/assets/woman-casual-white-sweater-sunglasses-red-wall.jpg");
+  background-repeat: no-repeat, repeat;
+  background-clip: content-box;
+  background-size: cover;
+  background-position: 1cqi;
+  
+
+  
+}

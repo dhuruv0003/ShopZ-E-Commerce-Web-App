@@ -23,7 +23,7 @@ export default function Header({ data }) {
 
     const { isDarkMode} = useContext(AppContext)
     return (
-        <div className={`${isDarkMode ? "bg-gradient-to-r border-b-8  border-slate-300 from-slate-500 to-black" : "bg-gradient-to-r border-b-8 border-black from-blue-100 to-purple-300"} w-[100%] overflow-hidden flex justify-center  rounded-b-[20%] mb-[2rem] space-x-6 px-8`} >
+        <div className={`${isDarkMode ? "bg-gradient-to-r border-b-8  border-slate-300 from-slate-500 to-black" : "bg-gradient-to-r border-b-8 border-black from-blue-100 to-purple-300"}  w-[100%] overflow-hidden flex justify-center  rounded-b-[20%] mb-[2rem] space-x-6 px-8`} >
             <div className="rounded-full flex flex-col gap-6  max-w-[1200px] mx-auto justify-evenly items-center" >
 
 

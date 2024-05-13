@@ -30,25 +30,27 @@ const Home = () => {
     fetchProductData();
   }, [])
 
-  
+
 
   function getCategory() {
     if (category === "All") {
       return posts;
     }
-    else{
-      return posts.filter((item)=>item.category===category)
+    else {
+      return posts.filter((item) => item.category === category)
     }
   }
 
   return (
-    <div className={`${isDarkMode ? "bg-gradient-to-r from-slate-500 to-black transition-all duration-500" : "bg-gradient-to-r from-blue-100 to-purple-100"}`}>
-       <div className={`${isDarkMode ? "bg-gradient-to-r from-slate-500 to-black":"bg-gradient-to-r from-blue-100 to-purple-300"}`}>
+    <div className={`${isDarkMode ? "bg-gradient-to-r from-slate-500 to-black transition-all duration-500" : "bg-gradient-to-r from-blue-100  to-purple-100"}`}>
+      <div className="">
+      <div className={`${isDarkMode ? "bg-gradient-to-r from-slate-500 to-black" : "bg-gradient-to-r from-blue-100 to-purple-300"} `}>
         <Category />
       </div>
       <Headers data={data} />
+      </div>
       <div className="w-[70%]  mb-6 mx-auto h-1 bg-purple-300 rounded-full shadow-black shadow-md"></div>
-     
+
       {
         loading ? <Spinner /> :
           posts.length > 0 ?
@@ -57,7 +59,7 @@ const Home = () => {
               {
                 getCategory().map((post) => (
                   <Product key={post.id} post={post} />
-                  
+
                 ))
               }
             </div>) :
@@ -65,7 +67,7 @@ const Home = () => {
               <p>No Data Found</p>
             </div>
       }
-      
+
     </div>
   );
 };
