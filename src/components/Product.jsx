@@ -11,7 +11,7 @@ const Product = ({ post }) => {
   const { cart } = useSelector((state) => state);
   const dispatch = useDispatch();
 
-  const {product,setProduct}=useContext(AppContext)
+  const {setProduct}=useContext(AppContext)
 
   const addToCart = () => {
     dispatch(add(post));
@@ -25,16 +25,16 @@ const Product = ({ post }) => {
 
 
   return (
-    <div className="flex flex-col items-center justify-between bg-white hover:shadow-[0_20px_50px_rgba(8,_100,_104,_0.2)] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-xl transition duration-300 ease-in-out  gap-3 p-4 mt-10 mx-2 hover:scale-105">
+    <div className="flex flex-col items-center justify-between bg-gradient-to-r from-pink-100 to-indigo-100 hover:shadow-[0_20px_50px_rgba(8,_100,_104,_0.2)] shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-xl transition duration-300 ease-in-out  gap-3 p-4 mt-10 mx-2 hover:scale-105">
       <div>
         <p className="text-gray-700 font-bold text-lg text-left truncate w-40 mt-1">{post.title}</p>
       </div>
       <div>
         <p className="w-40 text-gray-600 font-normal text-[14px] text-left  ">{post.description.split(" ").slice(0, 10).join(" ") + "..."}</p>
       </div>
-      <div className="h-[180px]">
-        <img src={post.image} className="h-full w-full" />
-      </div>
+      <div className=" w-[230px]  h-[180px]  flex justify-center items-center" >
+                <img className=" h-full w-full rounded-full object-contain " src={post.image} alt="" />
+            </div>
       <p className=" text-green-600 font-bold text-2xl">${post.price}</p>
 
       <div className="flex justify-between gap-7 ">
