@@ -17,7 +17,7 @@ export const ContactUs = () => {
         toast.success("Message send");
     }
     return (
-        <div className='bg-gradient-to-r from-blue-100 to-purple-300 py-[8rem]  h-fit w-screen  '>
+        <div className='bg-gradient-to-r from-blue-100 to-purple-300 py-[8rem]  h-fit  md:w-screen  '>
 
             <form className='mt-4 w-[550px] mx-auto flex flex-col gap-y-3' onSubmit={submitHandler} action="" >
                 <h1 className='text-center text-white text-3xl font-bold rounded-se-2xl rounded-ls-2xl  bg-[#20c6c6] bg-rounded-[0.5rem] p-[19px] w-full '>Please Enter Your Queries</h1>
