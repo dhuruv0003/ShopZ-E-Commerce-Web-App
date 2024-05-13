@@ -18,7 +18,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <nav className="flex justify-between items-center h-24 px-[2rem] max-w-6xl mx-auto">
+            <nav className="flex justify-between items-center h-24 px-[0.8rem] max-w-6xl mx-auto">
            
                 <NavLink to="/">
                     <div className="ml-5 ">
