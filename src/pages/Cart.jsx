@@ -13,7 +13,7 @@ const Cart = () => {
   }, [cart]);
 
   return (
-    <div className="mt-[6rem] bg-gradient-to-r from-blue-100 to-purple-300 px-3 mx-auto max-[400px]:px-[0.5rem]" >
+    <div className="mt-[6rem] bg-gradient-to-r from-blue-100 to-purple-300 px-3 mx-auto min-h-screen max-[400px]:px-[0.5rem] pt-[2rem]" >
       {cart.length > 0 ? (
         <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-center ">
           <div className="w-[100%] md:w-[60%] flex flex-col p-2">
