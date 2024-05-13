@@ -28,10 +28,10 @@ export default function Template({ title, desc, image, formtype }) {
                 <img src={frame} alt="" width={558}
                     height={504}
                     loading='lazy' />
-                <img src={image} alt="" width={558}
+                <img src={image} alt="" height={504} width={558}
                     
                     loading='lazy'
-                    className="rounded-md absolute -top-3 right-3 h-[410px] w-[450px] mx-auto" />
+                    className="rounded-md absolute -top-3 right-3  w-[450px] mx-auto" />
             </div>
 
         </div>
