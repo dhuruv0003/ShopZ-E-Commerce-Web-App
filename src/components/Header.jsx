@@ -34,7 +34,7 @@ export default function Header({ data }) {
                                 return (
                                     <div key={index} className="w-[90%] mx-auto  lg:w-[24%] ">
                                         <SlideShow key={slide.id}
-                                            {...slide} />
+                                            slide={slide} />
 
                                     </div>
                                 )

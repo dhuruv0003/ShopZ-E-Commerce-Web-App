@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar"
 import { Route } from "react-router-dom";
 import Home from "./pages/Home"
 import Cart from "./pages/Cart"
-
+import { ContactUs } from "./pages/ContactUs";
 import { AppContext } from "./Context/AppContext";
 import { useContext } from "react";
 import Login from "./pages/Login";
@@ -23,6 +23,7 @@ const App = () => {
       <Route path='/login' element={<Login/>}/>
       <Route path='/signup' element={<Signup/>}/>
       <Route path="/productItem" element={<ProductItem/>}></Route>
+      <Route path = "/contactus" element = {<ContactUs></ContactUs>}></Route>
     </Routes>
   </div>
   )
