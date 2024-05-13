@@ -21,7 +21,7 @@ const Navbar = () => {
             <nav className="flex justify-between items-center h-24 max-[400px]:px-[0.5rem] max-w-6xl mx-auto">
            
                 <NavLink to="/">
-                    <div className="ml-5 ">
+                    <div className="sm:ml-5 ">
                         <img src={logo} className="shadow-slate-900 shadow-md  h-[80px] w-[130px] rounded-es-3xl rounded-se-3xl " />
                     </div>
                 </NavLink>
