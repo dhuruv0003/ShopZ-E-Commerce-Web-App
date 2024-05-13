@@ -43,13 +43,14 @@ const Home = () => {
 
   return (
     <div className={`${isDarkMode ? "bg-gradient-to-r from-slate-500 to-black transition-all duration-500" : "bg-gradient-to-r from-blue-100  to-purple-100"}`}>
-      <div className="">
-      <div className={`${isDarkMode ? "bg-gradient-to-r from-slate-500 to-black" : "bg-gradient-to-r from-blue-100 to-purple-300"} `}>
-        <Category />
+     
+        <div className={`${isDarkMode ? "bg-gradient-to-r from-slate-500 to-black" : "bg-gradient-to-r from-blue-100 to-purple-300"} `}>
+          <Category />
+        </div>
+        <Headers data={data} />
+      
+      <div className="w-[70%]  mb-6 mx-auto h-1 bg-purple-300 rounded-full shadow-black shadow-md">
       </div>
-      <Headers data={data} />
-      </div>
-      <div className="w-[70%]  mb-6 mx-auto h-1 bg-purple-300 rounded-full shadow-black shadow-md"></div>
 
       {
         loading ? <Spinner /> :
