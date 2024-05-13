@@ -6,7 +6,7 @@ export default function Login() {
   const {isDarkMode} = useContext(AppContext);
 
   return (
-    <div className={`${isDarkMode?"bg-black":"bg-gradient-to-r  from-blue-200 to-purple-100 h-[screen] py-[4rem]"}`}>
+    <div className={`${isDarkMode ? "bg-gradient-to-r from-slate-500 text-white to-black" : "bg-gradient-to-r from-blue-100  to-purple-300"} lg:h-screen h-fit` }>
       <Template
         title="Welcome TO shopz"
         desc="Shop For Your Loved Ones"

@@ -23,27 +23,34 @@ const Navbar = () => {
                     </div>
                 </NavLink>
 
-                <div className="flex items-center font-bold text-white  mr-5 space-x-6">
+                <div className="flex items-center font-bold text-white space-x-5">
                     <NavLink to="/">
                         <p>Home</p>
                     </NavLink>
+
+                    <NavLink to="/contactus">
+                        Contact Us
+                    </NavLink>
+                    </div>
+                    <div className="flex items-center font-bold text-white space-x-5">
                     {
-                        !isloggedin && <NavLink to='/login'>Login</NavLink>
+                        !isloggedin &&
+                         <NavLink to='/login' className="px-2 border-[2px] p-1 rounded-lg">Login</NavLink>
                     }
                     {
                         isloggedin &&
-                        <NavLink to='/login' onClick={() => {
+                        <NavLink to='/login' className="border-[2px] px-2 p-1 rounded-lg" onClick={() => {
                             setisloggedin(false)
                             toast.error("Logged Out")
                         }}>LogOut</NavLink>
                     }
                     {
                         !isloggedin &&
-                        <NavLink to='/signup'>Signup</NavLink>
+                        <NavLink to='/signup' className="border-[2px] px-2 p-1 rounded-lg">Signup</NavLink>
                     }
 
-                    <NavLink to="/contactus">Contact Us</NavLink>
-                    <NavLink to="/cart">
+
+                    <NavLink to="/cart" className="border-[2px] px-2 p-1 rounded-lg">
 
                         <div className="relative">
                             <FaShoppingCart className="text-2xl" />
@@ -57,6 +64,7 @@ const Navbar = () => {
                     </NavLink>
 
                     <DarkModeSwitch
+                    className=" p-1 rounded-lg"
                         checked={isDarkMode}
                         onChange={toggleDarkMode}
                         size={30}
