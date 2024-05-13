@@ -42,7 +42,7 @@ const Home = () => {
   }
 
   return (
-    <div className={`${isDarkMode ? "bg-gradient-to-r from-slate-500 to-black transition-all duration-500" : "bg-gradient-to-r from-blue-100  to-purple-100"}`}>
+    <div className={`${isDarkMode ? "bg-gradient-to-r from-slate-500 to-black transition-all duration-500" : "bg-gradient-to-r from-blue-100  to-purple-100"}max-[400px]:px-[0.5rem]`}>
      
         <div className={`${isDarkMode ? "bg-gradient-to-r from-slate-500 to-black" : "bg-gradient-to-r from-blue-100 to-purple-300"} `}>
           <Category />
