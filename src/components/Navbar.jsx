@@ -31,7 +31,7 @@ const Navbar = () => {
                         <p>Home</p>
                     </NavLink>
 
-                    <NavLink to="/contactus">
+                    <NavLink className='max-[400px]:hidden' to="/contactus">
                         Contact Us
                     </NavLink>
                 </div>
