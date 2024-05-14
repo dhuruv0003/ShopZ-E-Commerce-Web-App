@@ -40,19 +40,19 @@ const Product = ({ post }) => {
       <div className="flex justify-between gap-7 ">
         <div>
           <NavLink to="/productItem">
-            <button className="text-gray-700 border-2 border-gray-700 text-xs font-bold rounded-full px-2 p-1" onClick={()=>setProduct(post)} >Buy Now</button>
+            <button className="text-gray-700 border-2 border-gray-700 font-bold rounded-full max-[600px]:text-md md:text-xs bg-white p-2" onClick={()=>setProduct(post)} >Buy Now</button>
           </NavLink>
         </div>
 
         {
           cart.some((p) => p.id === post.id) ?
             (<button
-              className="text-gray-700 border-2 border-gray-700  rounded-full bg-white hover:bg-black p-1 px-3 transition duration-300 ease-in-out hover:text-white text-xs font-bold  "
+              className="text-gray-700 border-2 border-gray-700  rounded-full bg-white hover:bg-black max-[600px]:text-md px-3 p-2 transition duration-300 md:text-xs  ease-in-out hover:text-white  font-bold  "
               onClick={removeFromCart}>
               Remove Item
             </button>) :
             (<button
-              className="text-gray-700 border-2 border-gray-700 text-xs font-bold rounded-full px-2 p-1"
+              className="text-gray-700 border-2 border-gray-700 max-[600px]:text-md px-3 p-2 md:text-xs  font-bold rounded-full bg-white"
               onClick={addToCart}>
               Add to Cart
             </button>)
