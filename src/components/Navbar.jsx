@@ -26,7 +26,7 @@ const Navbar = () => {
                     </div>
                 </NavLink>
 
-                <div className="flex items-center font-bold text-white space-x-5">
+                <div className="flex items-center font-bold text-white text-xl space-x-5">
                     <NavLink to="/">
                         <p>Home</p>
                     </NavLink>
@@ -35,7 +35,7 @@ const Navbar = () => {
                         Contact Us
                     </NavLink>
                 </div>
-                <TfiMenu onClick={()=>setHide((prev)=>!prev)}  className='xl:hidden relative font-extrabold text-4xl shadow-md  shadow-rose-950 bg-gradient-to-r from-pink-500 to-indigo-400 cursor-pointer'/>
+                <TfiMenu onClick={()=>setHide((prev)=>!prev)}  className='xl:hidden relative font-extrabold text-4xl shadow-md  shadow-rose-950 bg-gradient-to-r from-pink-500 to-indigo-400 cursor-pointer rounded-lg p-[2px]  text-slate-200 '/>
 
                 <div className={`${hide?"hidden":"absolute flex flex-col  items-baseline justify-evenly font-bold right-3 xl:right-[12rem] top-[4.5rem] text-white max-w-[100px] mx-auto space-x-5"} transition-translate transition-transform duration-300 translate-y-2 xl:flex xl:items-center xl:gap-3 xl:font-bold xl:justify-center `}>
                     {
