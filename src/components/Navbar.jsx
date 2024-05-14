@@ -26,12 +26,12 @@ const Navbar = () => {
                     </div>
                 </NavLink>
 
-                <div className="flex items-center font-extrabold text-[#5427b4] drop-shadow-lg lg:ml-[7rem]  text-2xl space-x-5">
+                <div className="flex items-center font-extrabold max-[1024px]:hidden text-[#5427b4] drop-shadow-lg lg:ml-[7rem]  md:text-2xl space-x-3 lg:space-x-5">
                     <NavLink to="/">
                         <p>Home</p>
                     </NavLink>
 
-                    <NavLink className='max-[400px]:hidden' to="/contactus">
+                    <NavLink className='' to="/contactus">
                         Contact Us
                     </NavLink>
                 </div>
@@ -48,7 +48,9 @@ const Navbar = () => {
                         </div>
 
                     </NavLink>
-                    <TfiMenu onClick={() => setHide((prev) => !prev)} className='lg:hidden relative font-extrabold text-4xl shadow-md  shadow-rose-950 bg-gradient-to-r from-pink-500 to-indigo-400 cursor-pointer rounded-lg p-[2px]  text-slate-200 ' />
+                    <div onMouseEnter={() => setHide((prev) => !prev)}>
+                        <TfiMenu onMouseOver={() => setHide((prev) => !prev)} className='lg:hidden relative font-extrabold text-4xl shadow-md  shadow-rose-950 bg-gradient-to-r from-pink-500 to-indigo-400 cursor-pointer rounded-lg p-[2px]  text-slate-200 ' />
+                    </div>
 
                 </div>
 
@@ -73,9 +75,9 @@ const Navbar = () => {
                     }
 
 
-                    <NavLink to="/cart" className="  border-[2px] w-[90px] bg-gradient-to-r from-pink-500 text-white  to-indigo-400  p-2 rounded-lg">
+                    <NavLink to="/cart" className="  border-[2px] w-[90px] bg-gradient-to-r from-pink-500 text-white  to-indigo-400  p-2 rounded-lg max-[1024px]:hidden" >
 
-                        <div className="relative flex justify-center">
+                        <div className="relative flex justify-center ">
                             <FaShoppingCart className="text-2xl " />
                             {
                                 cart.length > 0 &&
@@ -85,6 +87,12 @@ const Navbar = () => {
                         </div>
 
                     </NavLink>
+
+
+                    <NavLink className='p-2 w-[90px] bg-gradient-to-r from-pink-500 to-indigo-400 lg:hidden text-white  border-[2px] rounded-lg' to="/contactus">
+                        Contact
+                    </NavLink>
+
 
                     <div className="lg:bg-gradient-to-r lg:from-pink-100 lg:to-indigo-300  flex items-center gap-1 border-[2px] w-[90px]  bg-gradient-to-r from-pink-500 to-indigo-400  px-2 p-1 rounded-lg">
                         <DarkModeSwitch
