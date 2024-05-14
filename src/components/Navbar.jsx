@@ -36,7 +36,7 @@ const Navbar = () => {
                     </NavLink>
                 </div>
                 <div className="flex gap-3 items-center justify-center">
-                    <NavLink to="/cart" className="lg:hidden lg:bg-gradient-to-r lg:from-pink-100 lg:to-indigo-300   border-[2px] w-[60px] bg-gradient-to-r from-pink-500 to-indigo-400  p-2 rounded-lg">
+                    <NavLink to="/cart" className="lg:hidden lg:bg-gradient-to-r lg:from-pink-100 lg:to-indigo-300   border-[2px] w-[40px] bg-gradient-to-r from-pink-500 to-indigo-400  p-2 rounded-lg">
 
                         <div className="relative flex justify-center">
                             <FaShoppingCart className="text-2xl " />
