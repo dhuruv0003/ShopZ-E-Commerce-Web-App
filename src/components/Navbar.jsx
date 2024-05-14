@@ -18,7 +18,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <nav className="flex justify-between  items-center h-24 max-[400px]:px-[0.5rem] min-[450px]:p-[1rem] max-w-6xl mx-auto">
+            <nav className="flex justify-between items-center h-24 max-[400px]:px-[0.5rem] min-[450px]:p-[0.5rem] max-w-7xl mx-auto">
 
                 <NavLink to="/">
                     <div className="sm:ml-5 ">
@@ -26,7 +26,7 @@ const Navbar = () => {
                     </div>
                 </NavLink>
 
-                <div className="flex items-center font-bold text-white text-xl space-x-5">
+                <div className="flex items-center font-extrabold text-[#5427b4] drop-shadow-lg lg:ml-[7rem]  text-2xl space-x-5">
                     <NavLink to="/">
                         <p>Home</p>
                     </NavLink>
@@ -55,12 +55,12 @@ const Navbar = () => {
                 <div className={`${hide ? "hidden" : "absolute flex flex-col  items-baseline justify-evenly font-bold right-3 xl:right-[12rem] top-[4.5rem] text-white max-w-[100px] mx-auto space-x-5"} transition-translate transition-transform duration-300 translate-y-2 lg:flex lg:items-center lg:gap-3 lg:font-bold lg:justify-center `}>
                     {
                         !isloggedin &&
-                        <NavLink to='/login' className="p-2 w-[90px] lg:bg-gradient-to-r lg:from-pink-100 lg:to-indigo-300  bg-gradient-to-r from-pink-500 to-indigo-400 border-[2px] rounded-lg">Login</NavLink>
+                        <NavLink to='/login' className="p-2 w-[90px]   bg-gradient-to-r from-pink-500 lg:text-white  to-indigo-400 border-[2px]  rounded-lg">Login</NavLink>
                     }
                     {
                         isloggedin &&
-                        <NavLink to='/' className="border-[2px] w-[90px] p-2 rounded-lg lg:bg-gradient-to-r lg:from-pink-100 lg:to-indigo-300 
-                         bg-gradient-to-r from-pink-500 to-indigo-400" onClick={() => {
+                        <NavLink to='/' className="border-[2px] w-[90px] p-2 rounded-lg 
+                         bg-gradient-to-r from-pink-500 to-indigo-400 text-[#5427b4]  " onClick={() => {
                                 toast.error("Logged Out")
                                 setisloggedin(false)
 
@@ -69,17 +69,17 @@ const Navbar = () => {
                     }
                     {
                         !isloggedin &&
-                        <NavLink to='/signup' className="lg:bg-gradient-to-r lg:from-pink-100 lg:to-indigo-300  p-2 w-[90px] bg-gradient-to-r from-pink-500 to-indigo-400  border-[2px] rounded-lg">Signup</NavLink>
+                        <NavLink to='/signup' className="p-2 w-[90px] bg-gradient-to-r from-pink-500 to-indigo-400 text-white  border-[2px] rounded-lg">Signup</NavLink>
                     }
 
 
-                    <NavLink to="/cart" className="lg:bg-gradient-to-r lg:from-pink-100 lg:to-indigo-300   border-[2px] w-[90px] bg-gradient-to-r from-pink-500 to-indigo-400  p-2 rounded-lg">
+                    <NavLink to="/cart" className="  border-[2px] w-[90px] bg-gradient-to-r from-pink-500 text-white  to-indigo-400  p-2 rounded-lg">
 
                         <div className="relative flex justify-center">
                             <FaShoppingCart className="text-2xl " />
                             {
                                 cart.length > 0 &&
-                                <span className=" absolute -top-3 bg-green-600 rounded-[100%] w-5 h-5 flex justify-center items-center font-bold animate-bounce -right-2 text-xs">{cart.length}</span>
+                                <span className=" absolute -top-3 bg-gradient-to-r from-pink-600 to-indigo-800 rounded-[100%] w-5 h-5 flex justify-center items-center font-bold animate-bounce -right-2 text-xs">{cart.length}</span>
                             }
 
                         </div>
