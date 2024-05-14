@@ -48,10 +48,9 @@ const Navbar = () => {
                         </div>
 
                     </NavLink>
-                    <div onMouseEnter={() => setHide((prev) => !prev)}>
-                        <TfiMenu onMouseOver={() => setHide((prev) => !prev)} className='lg:hidden relative font-extrabold text-4xl shadow-md  shadow-rose-950 bg-gradient-to-r from-pink-500 to-indigo-400 cursor-pointer rounded-lg p-[2px]  text-slate-200 ' />
-                    </div>
-
+                
+                        <TfiMenu onClick={() => setHide((prev) => !prev)} className='lg:hidden relative font-extrabold text-4xl shadow-md  shadow-rose-950 bg-gradient-to-r from-pink-500 to-indigo-400 cursor-pointer rounded-lg p-[2px]  text-slate-200 ' />
+                    
                 </div>
 
                 <div className={`${hide ? "hidden" : "absolute flex flex-col  items-baseline justify-evenly font-bold right-3 xl:right-[12rem] top-[4.5rem] text-white max-w-[100px] mx-auto space-x-5"} transition-translate transition-transform duration-300 translate-y-2 lg:flex lg:items-center lg:gap-3 lg:font-bold lg:justify-center `}>
