@@ -23,10 +23,10 @@ const CartItem = ({item, itemIndex}) => {
           <img className="object-cover hover:scale-110 transition-all duration-300" src={item.image} />
         </div>
         <div className="md:ml-10 self-start space-y-5 w-[100%] md:w-[70%]">
-          <h1 className="text-xl text-slate-700 font-semibold">{item.title.split(" ").slice(0,6).join(" ")+".."}</h1>
-          <h1 className="text-base text-slate-700 font-medium">{item.description.split(" ").join(" ")+""}</h1>
+          <h1 className="text-xl font-semibold">{item.title.split(" ").slice(0,6).join(" ")+".."}</h1>
+          <h1 className="text-base  font-medium">{item.description.split(" ").join(" ")+""}</h1>
           <div>
-                        <p className="text-gray-700 font-bold text-xl flex gap-1 items-center text-left  mt-1">ratings : {item.rating.rate}<FaStar /> ({item.rating.count})</p>
+                        <p className=" font-bold text-xl flex gap-1 items-center text-left  mt-1">ratings : {item.rating.rate}<FaStar /> ({item.rating.count})</p>
                     </div>
           <div className="flex items-center justify-between">
             <p className="font-bold text-lg text-green-600 ">${item.price}</p>

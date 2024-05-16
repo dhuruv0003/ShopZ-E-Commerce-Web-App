@@ -48,12 +48,15 @@ const Navbar = () => {
                         </div>
 
                     </NavLink>
-                
-                        <TfiMenu onClick={() => setHide((prev) => !prev)} className='lg:hidden relative font-extrabold text-4xl shadow-md  shadow-rose-950 bg-gradient-to-r from-pink-500 to-indigo-400 cursor-pointer rounded-lg p-[2px]  text-slate-200 ' />
-                    
+
+                    <TfiMenu onClick={() => setHide((prev) => !prev)} className='lg:hidden relative font-extrabold text-4xl shadow-md  shadow-rose-950 bg-gradient-to-r from-pink-500 to-indigo-400 cursor-pointer rounded-lg p-[2px]  text-slate-200 ' />
+
                 </div>
 
                 <div className={`${hide ? "hidden" : "absolute flex flex-col  items-baseline justify-evenly font-bold right-3 xl:right-[12rem] top-[4.5rem] text-white max-w-[100px] mx-auto space-x-5"} transition-translate transition-transform duration-300 translate-y-2 lg:flex lg:items-center lg:gap-3 lg:font-bold lg:justify-center `}>
+                    <NavLink to="/" className='p-2 w-[90px] lg:hidden  bg-gradient-to-r from-pink-500 lg:text-white  to-indigo-400 border-[2px]  rounded-lg'>
+                        <p>Home</p>
+                    </NavLink>
                     {
                         !isloggedin &&
                         <NavLink to='/login' className="p-2 w-[90px]   bg-gradient-to-r from-pink-500 lg:text-white  to-indigo-400 border-[2px]  rounded-lg">Login</NavLink>
@@ -61,11 +64,9 @@ const Navbar = () => {
                     {
                         isloggedin &&
                         <NavLink to='/' className="border-[2px] w-[90px] p-2 rounded-lg 
-                         bg-gradient-to-r from-pink-500 to-indigo-400 text-[#5427b4]  " onClick={() => {
+                         bg-gradient-to-r from-pink-500 to-indigo-400  " onClick={() => {
                                 toast.error("Logged Out")
                                 setisloggedin(false)
-
-
                             }}>LogOut</NavLink>
                     }
                     {

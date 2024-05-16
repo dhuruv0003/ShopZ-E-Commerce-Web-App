@@ -144,43 +144,45 @@ export default function ProductItem() {
 
     };
 
-    return (
-        <div className="bg-gradient-to-r  from-blue-100 to-purple-200 max-[400px]:px-[0.5rem]">
-            <div className='py-[10rem] max-w-[1000px]  mx-auto flex flex-wrap justify-center gap-[5rem] bg-gradient-to-r  from-blue-100 to-purple-200 h-fit '>
+    const {isDarkMode} =useContext(AppContext);
 
-                <div className="sm:w-[30%]">
+    return (
+        <div className={`${isDarkMode ? "bg-gradient-to-r  from-slate-500 text-white to-black" : "bg-gradient-to-r from-blue-100  to-purple-300"}  max-[400px]:px-[0.5rem] min-h-screen h-full py-[10rem]` }>
+            <div  className={` max-w-[1000px]  mx-auto flex flex-wrap justify-center gap-[5rem] bg-transparent min-h-max`}>
+
+                <div className="sm:w-[30%] ">
                     <img src={product.image} className="h-[400px] w-[350px]" />
                 </div>
 
                 <div className="flex flex-col justify-evenly gap-[2rem] sm:w-[60%] h-fit capitalize ">
                     <div>
-                        <p className="text-gray-700 font-bold text-3xl text-left truncate  mt-1">{product.category}</p>
+                        <p className={`${isDarkMode?"text-white":"text-gray-700"} font-bold text-3xl text-left truncate  mt-1`}>{product.category}</p>
                     </div>
                     <div>
-                        <p className="text-gray-700 font-bold text-xl text-left  mt-1">{product.title}</p>
+                        <p className={`${isDarkMode?"text-white":"text-gray-700"} font-bold text-xl text-left  mt-1`}>{product.title}</p>
                     </div>
                     <div className='w-[300px] sm:w-full'>
-                        <p className="text-gray-00 font-normal text-[15px] text-left  ">{product.description}</p>
+                        <p className={`${isDarkMode?"text-white":"text-gray-700"}font-normal text-[15px] text-left  `}>{product.description}</p>
                     </div>
 
                     <p className=" text-green-600 font-bold text-2xl">${product.price}</p>
 
                     <div>
-                        <p className="text-gray-700 font-bold text-xl flex gap-1 items-center text-left  mt-1">ratings : {product.rating.rate}<FaStar /> ({product.rating.count})</p>
+                        <p className={`${isDarkMode?"text-white":"text-gray-700"}font-bold text-xl flex gap-1 items-center text-left  mt-1`}>ratings : {product.rating.rate}<FaStar /> ({product.rating.count})</p>
                     </div>
 
 
-                    <button className="text-gray-700 border-2 border-gray-700 text-lg font-bold rounded-full px-2 w-[200px] p-1" onClick={() => setProduct(product)} >Buy Now</button>
+                    <button className={`${isDarkMode?"text-white border-gray-100 ":"text-gray-700"}border-2 border-gray-700 text-lg font-bold rounded-full px-2 w-[200px] p-1`} onClick={() => setProduct(product)} >Buy Now</button>
 
 
                 </div>
                 <h1 className='text-3xl font-extrabold'>Items You may Also Like</h1>
-                <div className="w-3/4 h-[400px]">
+                <div className="w-3/4 h-[400px] bg">
                     <Slider {...settings}>
                         {
                             data.map((slide, index) => {
                                 return (
-                                    <div key={index} className="w-[90%] mx-auto  lg:w-[24%] ">
+                                    <div key={index} className="w-[90%]  mx-auto  lg:w-[24%] ">
                                         <SlideShow key={slide.id}
                                             slide={slide} />
 
@@ -189,7 +191,7 @@ export default function ProductItem() {
                                 )
                             })
                         }
-                    </Slider>;
+                    </Slider>
                 </div>
 
 

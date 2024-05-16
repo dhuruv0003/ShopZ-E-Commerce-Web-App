@@ -5,13 +5,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { add, remove } from "../redux/Slices/CartSlice";
 export default function SlideShow({ slide }) {
 
-    const { product, setProduct } = useContext(AppContext);
+    const { product, setProduct,isDarkMode } = useContext(AppContext);
     const { cart } = useSelector(state => state);
     const dispatch = useDispatch();
 
 
     return (
-        <div className="bg-gradient-to-r from-pink-200 to-indigo-300 p-6 min-h-[450px] flex flex-col justify-evenly items-center  transition-all duration-300 rounded-3xl md:rounded-full ease-in-out ">
+        <div className={`${isDarkMode?"bg-white text-black":"bg-gradient-to-r from-pink-200 to-indigo-300 "}p-6 min-h-[450px] flex flex-col justify-evenly text-black items-center  transition-all duration-300 rounded-3xl md:rounded-full ease-in-out `}>
             <div className="font-bold text-xl text-center">{`${slide.title.substring(0, 30)}...`}</div>
             <div className=" w-[230px]  h-[180px]  flex justify-center items-center" >
                 <img className=" h-full w-full rounded-full object-fill " src={slide.image} alt="" />
