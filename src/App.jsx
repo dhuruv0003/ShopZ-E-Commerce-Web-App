@@ -13,7 +13,7 @@ import PrivateRoute from "./components/PrivateRoute";
 const App = () => {
   const { isDarkMode, setDarkMode,isloggedin, toggleDarkMode }=useContext(AppContext);
   return (<div className="">
-    <div className={`${isDarkMode ?'bg-gradient-to-r from-slate-400 to-slate-950 shadow-slate-900 shadow-lg  z-50 w-full fixed top-0': 'bg-gradient-to-r from-pink-100 to-indigo-500 shadow-black shadow-lg  z-50 w-full fixed top-0'}`}>
+    <div className={`${isDarkMode ?'bg-gradient-to-r from-slate-400 to-slate-950 shadow-slate-900 shadow-lg text-white z-50 w-full fixed top-0': 'bg-gradient-to-r from-pink-100 to-indigo-500 shadow-black shadow-lg  z-50 w-full fixed top-0'}`}>
       <Navbar />
     </div>
     

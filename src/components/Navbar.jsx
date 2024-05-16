@@ -26,7 +26,7 @@ const Navbar = () => {
                     </div>
                 </NavLink>
 
-                <div className="flex items-center font-extrabold max-[1024px]:hidden text-[#5427b4] drop-shadow-lg lg:ml-[7rem]  md:text-2xl space-x-3 lg:space-x-5">
+                <div className="flex items-center font-extrabold max-[1024px]:hidden text-[#ffffff] drop-shadow-lg lg:ml-[7rem]  md:text-2xl space-x-3 lg:space-x-5">
                     <NavLink to="/">
                         <p>Home</p>
                     </NavLink>

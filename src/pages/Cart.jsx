@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import CartItem from "../components/CartItem";
+import { AppContext } from "../Context/AppContext";
 
 const Cart = () => {
   const { cart } = useSelector((state) => state);
@@ -11,9 +12,10 @@ const Cart = () => {
   useEffect(() => {
     setTotalAmount(cart.reduce((acc, curr) => acc + curr.price, 0));
   }, [cart]);
-
+  const {isDarkMode}=useContext(AppContext)
   return (
-    <div className="mt-[6rem] bg-gradient-to-r from-blue-100 to-purple-300 px-3 mx-auto min-h-screen max-[400px]:px-[0.5rem] pt-[2rem]" >
+    
+      <div className={`${isDarkMode ? "bg-gradient-to-r  from-slate-500 text-white to-black" : "bg-gradient-to-r from-blue-100  to-purple-300"} lg:h-screen max-[400px]:px-[0.5rem] h-fit` }>
       {cart.length > 0 ? (
         <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-center ">
           <div className="w-[100%] md:w-[60%] flex flex-col p-2">
