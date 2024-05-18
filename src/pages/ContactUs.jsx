@@ -21,7 +21,7 @@ export const ContactUs = () => {
         toast.success("Message send");
     }
     return (
-        <div className={`${isDarkMode?"bg-gradient-to-r from-slate-400 to-slate-950 shadow-slate-900 300 py-[8rem] h-fit md:w-screen max-[400px]:px-[0.5rem]":'bg-gradient-to-r from-blue-100 to-purple-300 py-[8rem]  h-fit  md:w-screen max-[400px]:px-[0.5rem] '}`}>
+        <div className={`${isDarkMode?"bg-gradient-to-r from-slate-400 to-slate-950 shadow-slate-900 300 py-[8rem] h-fit md:w-screen max-[400px]:px-[0.5rem]":'bg-gradient-to-r from-blue-100 to-purple-100 py-[8rem]  h-fit  md:w-screen max-[400px]:px-[0.5rem] '}`}>
 
             <form className='mt-4 max-w-[550px] mx-auto flex flex-col gap-y-3' onSubmit={submitHandler} action="" >
                 <h1 className='text-center text-white text-3xl font-bold rounded-se-2xl rounded-ls-2xl  bg-purple-900 bg-rounded-[0.5rem] p-[19px] w-full '>Please Enter Your Queries</h1>
