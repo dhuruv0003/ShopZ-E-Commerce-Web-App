@@ -31,9 +31,9 @@ export default function MyContextProvider({ children }) {
     const [isloggedin, setloggedin] = useState(false)
 
     const [product,setProduct]=useState({})
-
+    const [hide, setHide] = useState(true)
     const value = {
-        isDarkMode, setDarkMode, toggleDarkMode, filterData, category, setCategory,isloggedin, setloggedin,product,setProduct
+        isDarkMode, setDarkMode, toggleDarkMode, filterData, category, setCategory,isloggedin, setloggedin,product,setProduct,hide, setHide
     }
 
     return <AppContext.Provider value={value}>

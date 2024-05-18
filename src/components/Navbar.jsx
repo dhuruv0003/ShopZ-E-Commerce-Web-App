@@ -10,11 +10,11 @@ import { TfiMenu } from "react-icons/tfi";
 
 const Navbar = () => {
 
-    const { isloggedin, setisloggedin } = useContext(AppContext)
+    const { isloggedin, setisloggedin,hide,setHide } = useContext(AppContext)
     const { isDarkMode, setDarkMode, toggleDarkMode } = useContext(AppContext);
     const { cart } = useSelector((state) => state);
 
-    const [hide, setHide] = useState(true)
+    
 
     return (
         <div>

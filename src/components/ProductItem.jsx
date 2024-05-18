@@ -144,10 +144,10 @@ export default function ProductItem() {
 
     };
 
-    const {isDarkMode} =useContext(AppContext);
+    const {isDarkMode,setHide} =useContext(AppContext);
 
     return (
-        <div className={`${isDarkMode ? "bg-gradient-to-r  from-slate-500 text-white to-black" : "bg-gradient-to-r from-blue-100  to-purple-100"}  max-[400px]:px-[0.5rem] min-h-screen h-full py-[10rem]` }>
+        <div onClick={()=>setHide(true)} className={`${isDarkMode ? "bg-gradient-to-r  from-slate-500 text-white to-black" : "bg-gradient-to-r from-blue-100  to-purple-100"}  max-[400px]:px-[0.5rem] min-h-screen h-full py-[10rem]` }>
             <div  className={` max-w-[1000px]  mx-auto flex flex-wrap justify-center gap-[5rem] bg-transparent min-h-max`}>
 
                 <div className="sm:w-[30%] ">

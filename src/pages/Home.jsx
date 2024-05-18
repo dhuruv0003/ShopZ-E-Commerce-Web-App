@@ -10,7 +10,7 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const [posts, setPosts] = useState([]);
 
-  const { isDarkMode, setDarkMode, category, toggleDarkMode } = useContext(AppContext)
+  const { isDarkMode,setHide, setDarkMode, category, toggleDarkMode } = useContext(AppContext)
 
   async function fetchProductData() {
     setLoading(true);
@@ -42,7 +42,7 @@ const Home = () => {
   }
 
   return (
-    <div className={`${isDarkMode ? "bg-gradient-to-r from-slate-500 to-black transition-all duration-500" : "bg-gradient-to-r from-blue-100  to-purple-100"}max-[400px]:px-[0.5rem]`}>
+    <div onClick={()=>setHide(false)} className={`${isDarkMode ? "bg-gradient-to-r from-slate-500 to-black transition-all duration-500" : "bg-gradient-to-r from-blue-100  to-purple-100"}max-[400px]:px-[0.5rem]`}>
      
         <div className={`${isDarkMode ? "bg-gradient-to-r from-slate-500 to-black" : "bg-gradient-to-r from-blue-100 to-purple-300"} `}>
           <Category />
