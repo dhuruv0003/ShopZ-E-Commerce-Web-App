@@ -11,13 +11,14 @@ import { TfiMenu } from "react-icons/tfi";
 const Navbar = () => {
 
     const { isloggedin, setisloggedin,hide,setHide } = useContext(AppContext)
-    const { isDarkMode, setDarkMode, toggleDarkMode } = useContext(AppContext);
+    const { isDarkMode,  toggleDarkMode } = useContext(AppContext);
     const { cart } = useSelector((state) => state);
 
     
 
     return (
-        <div>
+        <div >
+            
             <nav className="flex justify-between items-center h-24 max-[400px]:px-[0.5rem] min-[450px]:p-[0.5rem] max-w-7xl mx-auto">
 
                 <NavLink to="/">

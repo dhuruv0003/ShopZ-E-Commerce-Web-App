@@ -14,7 +14,7 @@ export default function SlideShow({ slide }) {
         <div className={`${isDarkMode?"bg-white text-black":"bg-gradient-to-r from-pink-200 to-indigo-300 "}p-6 min-h-[450px] flex flex-col justify-evenly text-black items-center  transition-all duration-300 rounded-3xl md:rounded-full ease-in-out `}>
             <div className="font-bold text-xl text-center">{`${slide.title.substring(0, 30)}...`}</div>
             <div className=" w-[230px]  h-[180px]  flex justify-center items-center" >
-                <img className=" h-full w-full rounded-full object-fill " src={slide.image} alt="" />
+                <img className=" h-full w-full rounded-full object-fill " src={slide.image} loading="lazy" alt="" />
             </div>
             <div className="text-center text-green-600 font-extrabold">${slide.price}</div>
             <div className=" w-[70%] mx-auto text-justify">{slide.description.substring(0, 120)}</div>
