@@ -57,7 +57,7 @@ export default function SignupForm() {
           <input type="text"
             className='text-[black]  rounded-[0.5rem] placeholder:text-slate-500 bg-[#f1dcff] w-full p-[9px]'
             required
-            placeholder='raju69'
+            placeholder='kumar'
             name='lastname'
             value={formData.lastname}
             onChange={changeHandler}
