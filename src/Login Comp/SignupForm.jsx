@@ -29,7 +29,7 @@ export default function SignupForm() {
   function submitHandler(event) {
     event.preventDefault();
     if (formData.password !== formData.confirmpass) {
-      toast.error("Password do npot match")
+      toast.error("Password do not match")
     }
     else {
       toast.success("Successfull created account");
