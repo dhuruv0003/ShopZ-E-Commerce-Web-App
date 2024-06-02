@@ -44,28 +44,28 @@ export const ContactUs = () => {
                 <button className='
                w-full mt-4 bg-[#5f154c] rounded-[8px] font-medium py-2 text-[#e6e6e6]' type="submit" >Submit</button>
             </form>
-            <footer className={`${isDarkMode ? 'bg-gradient-to-r from-slate-400 to-slate-950 shadow-slate-900 shadow-lg text-white z-50 w-full ' : 'bg-gradient-to-r from-pink-100 to-indigo-500 shadow-black shadow-lg  z-50 w-full '}max-[600px]:py-6 py-6 mt-10 max-[600px]:flex sm:flex sm:flex-col gap-5 `}>
-        <div className="max-[600px]:flex max-[600px]:flex-col  flex justify-center  max-[600px]:gap-1 gap-5 items-center max-[600px]:text-lg sm:text-xl px-8 font-extrabold ">
-          <NavLink to='/'>
-            Home
-          </NavLink>
-          <NavLink to='/login'>
-            Login
-          </NavLink>
-          <NavLink to='/signup'>
-            Sign up
-          </NavLink>
-          <NavLink to='/contact'>
-            Contact 
-          </NavLink>
-          <NavLink to='/cart'>
-            Cart
-          </NavLink>
-        </div>
-        <div className="flex justify-center items-center gap-x-2 font-bold ">
-          Made With<IoMdHeart className="text-[red] text-5xl mr-2 flex " /> Dhuruv Kumar
-        </div>
-      </footer>
+            <footer className={`${isDarkMode ? 'bg-gradient-to-r from-slate-400 to-slate-950 shadow-slate-900 shadow-lg text-white z-50 w-full ' : 'bg-gradient-to-r from-pink-100 to-indigo-500 shadow-black shadow-lg  z-50 w-full '} py-8 mt-10  flex flex-col gap-7 `}>
+                <div className=" flex justify-center gap-5 items-center max-[600px]:text-lg sm:text-xl px-8 font-extrabold ">
+                    <NavLink to='/'>
+                        Home
+                    </NavLink>
+                    <NavLink to='/login'>
+                        Login
+                    </NavLink>
+                    <NavLink to='/signup'>
+                        Signup
+                    </NavLink>
+                    <NavLink to='/contact'>
+                        Contact
+                    </NavLink>
+                    <NavLink to='/cart'>
+                        Cart
+                    </NavLink>
+                </div>
+                <div className="flex justify-center items-center gap-x-2 font-bold ">
+                    Made With<IoMdHeart className="text-[red] text-2xl flex " />by Dhuruv Kumar <NavLink className='text-2xl' to='https://github.com/dhuruv0003/ShopZ-E-Commerce-Web-App'><AiFillGithub /></NavLink>
+                </div>
+            </footer>
         </div>
     )
 }
