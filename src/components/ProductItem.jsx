@@ -6,6 +6,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SlideShow from './SlideShow';
 
+
+
 export default function ProductItem() {
     const { product, setProduct } = useContext(AppContext)
 
@@ -131,7 +133,7 @@ export default function ProductItem() {
                 "count": 470
             }
         },
-       
+
 
     ];
     var settings = {
@@ -144,11 +146,11 @@ export default function ProductItem() {
 
     };
 
-    const {isDarkMode,setHide} =useContext(AppContext);
+    const { isDarkMode, setHide } = useContext(AppContext);
 
     return (
-        <div onClick={()=>setHide(true)} className={`${isDarkMode ? "bg-gradient-to-r  from-slate-500 text-white to-black" : "bg-gradient-to-r from-blue-100  to-purple-100"}  max-[400px]:px-[0.5rem] min-h-screen h-full py-[10rem]` }>
-            <div  className={` max-w-[1000px]  mx-auto flex flex-wrap justify-center gap-[5rem] bg-transparent min-h-max`}>
+        <div onClick={() => setHide(true)} className={`${isDarkMode ? "bg-gradient-to-r  from-slate-500 text-white to-black" : "bg-gradient-to-r from-blue-100  to-purple-100"}  max-[400px]:px-[0.5rem] min-h-screen h-full py-[10rem]`}>
+            <div className={` max-w-[1000px]  mx-auto flex flex-wrap justify-center gap-[5rem] bg-transparent min-h-max`}>
 
                 <div className="sm:w-[30%] ">
                     <img src={product.image} className="h-[400px] w-[350px]" />
@@ -156,23 +158,23 @@ export default function ProductItem() {
 
                 <div className="flex flex-col justify-evenly gap-[2rem] sm:w-[60%] h-fit capitalize ">
                     <div>
-                        <p className={`${isDarkMode?"text-white":"text-gray-700"} font-bold text-3xl text-left truncate  mt-1`}>{product.category}</p>
+                        <p className={`${isDarkMode ? "text-white" : "text-gray-700"} font-bold text-3xl text-left truncate  mt-1`}>{product.category}</p>
                     </div>
                     <div>
-                        <p className={`${isDarkMode?"text-white":"text-gray-700"} font-bold text-xl text-left  mt-1`}>{product.title}</p>
+                        <p className={`${isDarkMode ? "text-white" : "text-gray-700"} font-bold text-xl text-left  mt-1`}>{product.title}</p>
                     </div>
                     <div className='w-[300px] sm:w-full'>
-                        <p className={`${isDarkMode?"text-white":"text-gray-700"}font-normal text-[15px] text-left  `}>{product.description}</p>
+                        <p className={`${isDarkMode ? "text-white" : "text-gray-700"}font-normal text-[15px] text-left  `}>{product.description}</p>
                     </div>
 
                     <p className=" text-green-600 font-bold text-2xl">${product.price}</p>
 
                     <div>
-                        <p className={`${isDarkMode?"text-white":"text-gray-700"}font-bold text-xl flex gap-1 items-center text-left  mt-1`}>ratings : {product.rating.rate}<FaStar /> ({product.rating.count})</p>
+                        <p className={`${isDarkMode ? "text-white" : "text-gray-700"}font-bold text-xl flex gap-1 items-center text-left  mt-1`}>ratings : {product.rating.rate}<FaStar /> ({product.rating.count})</p>
                     </div>
 
 
-                    <button className={`${isDarkMode?"text-white border-gray-100 ":"text-gray-700"}border-2 border-gray-700 text-lg font-bold rounded-full px-2 w-[200px] p-1`} onClick={() => setProduct(product)} >Buy Now</button>
+                    <button className=' w-full mt-4 bg-[#5f154c] rounded-[8px] font-medium py-2 text-[#e6e6e6]' onClick={() => setProduct(product)} >Buy Now</button>
 
 
                 </div>
@@ -199,28 +201,7 @@ export default function ProductItem() {
 
 
             </div >
-            <footer className={`${isDarkMode ? 'bg-gradient-to-r from-slate-400 to-slate-950 shadow-slate-900 shadow-lg text-white z-50 w-full ' : 'bg-gradient-to-r from-pink-100 to-indigo-500 shadow-black shadow-lg  z-50 w-full '} py-8 mt-10  flex flex-col gap-7 `}>
-        <div className=" flex justify-center gap-5 items-center max-[600px]:text-lg sm:text-xl px-8 font-extrabold ">
-          <NavLink to='/'>
-            Home
-          </NavLink>
-          <NavLink to='/login'>
-            Login
-          </NavLink>
-          <NavLink to='/signup'>
-            Signup
-          </NavLink >
-          <NavLink to='/contact'>
-            Contact 
-          </NavLink>
-          <NavLink to='/cart'>
-            Cart
-          </NavLink>
-        </div>
-        <div className="flex justify-center items-center gap-x-2 font-bold ">
-          Made With<IoMdHeart className="text-[red] text-2xl flex " />by Dhuruv Kumar <NavLink className='text-2xl' to='https://github.com/dhuruv0003/ShopZ-E-Commerce-Web-App'><AiFillGithub /></NavLink>
-        </div>
-      </footer>
+           
         </div>
 
     )
