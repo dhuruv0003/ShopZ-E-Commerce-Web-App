@@ -16,7 +16,7 @@ export default function Login() {
         formtype="login"
         image={loginimg}
       />
-      <footer className={`${isDarkMode ? 'bg-gradient-to-r from-slate-400 to-slate-950 shadow-slate-900 shadow-lg text-white z-50 w-full fixed top-0' : 'bg-gradient-to-r from-pink-100 to-indigo-500 shadow-black shadow-lg  z-50 w-full '}max-[480px]:py-6 py-2 mt-10 flex flex-col gap-5 `}>
+      <footer className={`${isDarkMode ? 'bg-gradient-to-r from-slate-400 to-slate-950 shadow-slate-900 shadow-lg text-white z-50 w-full fixed top-0' : 'bg-gradient-to-r from-pink-100 to-indigo-500 shadow-black shadow-lg  z-50 w-full '}max-[480px]:py-6 py-6 mt-10 flex flex-col gap-5 `}>
         <div className="max-[480px]:flex max-[480px]:flex-col  flex justify-center max-[480px]:gap-1 gap-5 items-center text-xl px-10 font-extrabold ">
           <NavLink to='/'>
             Home
