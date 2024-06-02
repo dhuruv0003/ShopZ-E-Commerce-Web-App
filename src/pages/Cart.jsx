@@ -18,7 +18,7 @@ const Cart = () => {
   
   return (
     
-      <div onClick={()=>setHide(true)} className={`${isDarkMode ? "bg-gradient-to-r  from-slate-500 text-white to-black " : "bg-gradient-to-r from-blue-100  to-purple-100"} min-h-screen max-[400px]:px-[0.5rem] h-fit pt-[7rem]` }>
+      <div onClick={()=>setHide(true)} className={`${isDarkMode ? "bg-gradient-to-r  from-slate-500 text-white to-black " : "bg-gradient-to-r from-blue-100  to-purple-100"} min-h-full max-[400px]:px-[0.5rem] h-fit pt-[7rem]` }>
       {cart.length > 0 ? (
         <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-center ">
           <div className="w-[100%] md:w-[60%] flex flex-col p-2">
@@ -27,7 +27,7 @@ const Cart = () => {
             })}
           </div>
 
-          <div className="w-[100%] md:w-[40%] mb-16  flex flex-col mx-3 justify-between">
+          <div className="w-[100%] md:w-[40%] mb-24 flex flex-col mx-3 justify-between">
             <div className="flex flex-col p-5 gap-5 my-14 h-[100%] ">
               <div className=" flex flex-col gap-5 ">
                 <div className="font-semibold text-xl text-green-800">Your Cart</div>
