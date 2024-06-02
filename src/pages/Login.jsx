@@ -9,7 +9,7 @@ export default function Login() {
   const { isDarkMode, setHide } = useContext(AppContext);
 
   return (
-    <div onClick={() => setHide(true)} className={`${isDarkMode ? "bg-gradient-to-r from-slate-500 text-white to-black" : "bg-gradient-to-r from-blue-100  to-purple-100"} lg:h-full max-[400px]:px-[0.5rem] h-full`}>
+    <div onClick={() => setHide(true)} className={`${isDarkMode ? "bg-gradient-to-r from-slate-500 text-white to-black" : "bg-gradient-to-r from-blue-100  to-purple-100"} lg:h-full h-full`}>
       <Template
         title="Welcome TO shopz"
         desc="Shop For Your Loved Ones"
