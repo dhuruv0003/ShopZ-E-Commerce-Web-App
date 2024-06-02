@@ -18,7 +18,7 @@ const Cart = () => {
 
   return (
 
-    <div onClick={() => setHide(true)} className={`${isDarkMode ? "bg-gradient-to-r  from-slate-500 text-white to-black " : "bg-gradient-to-r from-blue-100  to-purple-100"} min-h-full max-[400px]:px-[0.5rem] h-fit pt-[7rem]`}>
+    <div onClick={() => setHide(true)} className={`${isDarkMode ? "bg-gradient-to-r  from-slate-500 text-white to-black " : "bg-gradient-to-r from-blue-100  to-purple-100"} max-[400px]:px-[0.5rem]  pt-[7rem]`}>
       {cart.length > 0 ? (
         <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-center ">
           <div className="w-[100%] md:w-[60%] flex flex-col p-2">
@@ -46,7 +46,7 @@ const Cart = () => {
         </div>
       ) : (
         <div className="min-h-[70vh] flex flex-col items-center justify-center">
-          <h1 className="text-gray-700 font-semibold text-xl mb-2">
+          <h1 className=" font-semibold text-xl text-slate-500 mb-2">
             Your cart is empty!
           </h1>
           <Link to={"/"}>
@@ -56,7 +56,7 @@ const Cart = () => {
           </Link>
         </div>
       )}
-      <footer className={`${isDarkMode ? 'bg-gradient-to-r from-slate-400 to-slate-950 shadow-slate-900 shadow-lg text-white z-50 w-full fixed top-0' : 'bg-gradient-to-r from-pink-100 to-indigo-500 shadow-black shadow-lg  z-50 w-full '}max-[600px]:py-6 py-6 mt-10 flex flex-col gap-5 `}>
+      <footer className={`${isDarkMode ? 'bg-gradient-to-r from-slate-400 to-slate-950 shadow-slate-900 shadow-lg text-white z-50 w-full ' : 'bg-gradient-to-r from-pink-100 to-indigo-500 shadow-black shadow-lg  z-50 w-full '}max-[600px]:py-6 py-6 mt-10 flex flex-col gap-5 `}>
         <div className="max-[600px]:flex max-[600px]:flex-col  flex justify-center max-[600px]:gap-1 gap-5 items-center text-xl px-10 font-extrabold ">
           <NavLink to='/'>
             Home
