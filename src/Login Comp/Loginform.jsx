@@ -32,7 +32,7 @@ export default function Loginform() {
     navigate("/")
   }
 
-  console.log(isloggedin);
+
 
   return (
     <div>
@@ -49,38 +49,30 @@ export default function Loginform() {
           />
         </label>
 
-        <label htmlFor="">
-          <p className="text-[0.875rem] text-black mb-1 leading-[1.375rem]">
-            Password <sup className="text-[red]">*</sup>
-          </p>
-          <input type={showPassword ? "text" : "password"}
-            className="text-[black] placeholder:text-slate-500 bg-[#f1dcff] bg-rounded-[0.5rem] w-full p-[9px] rounded-lg"
-            placeholder='abcd@123'
-            name='password'
-            value={formData.password}
-            onChange={changeHandler}
-            required
-          />
-
-          <span className="absolute right-3 top-[40px] cursor-pointer"
-            // Jaise hi eye par click kere password visible ho jaye and eye par slash aa jaye, and vice versa for next click
-            onClick={() =>
-              setShowPassword((prev) => (!prev))
-            }
-          >
-            {
-              showPassword ?
-                (<AiOutlineEyeInvisible fontSize={24} />) :
-                (<AiOutlineEye fontSize={24} />)
-            }
-          </span>
+        <div className="flex
+                gap-x-4">
+          <label className="relative w-full" htmlFor="">
+            <p className="text-[0.875rem] text-black mb-1 leading-[1.375rem]">Create Password</p>
+            <input type={showPassword ? "text" : "password"}
+              placeholder="Enter Password"
+              name="password"
+              className="text-[black] placeholder:text-slate-500 bg-[#f1dcff] rounded-[0.5rem] w-full p-[9px]"
+              onChange={changeHandler}
+              value={formData.password}
+            />
+            <span className="absolute right-3 top-[40px] cursor-pointer" onClick={() =>
+              setShowPassword(prev => !prev)}>
+              {showPassword ? (<AiOutlineEyeInvisible />) : (<AiOutlineEye />)}
+            </span>
+         
           <Link to="#">
             <p className=" text-sm mt-1 text-blue-500 text-right">Forgot Password?</p>
           </Link>
         </label>
+        </div>
 
         <button className='
-                <button className="w-full mt-4 bg-[#5f154c] rounded-[8px] font-medium py-2 text-[#e6e6e6]'>
+                <button className="w-full mt-4 bg-[#5f154c] rounded-[8px] font-medium pt-2 text-[#e6e6e6]'>
           Login
         </button>
       </form>

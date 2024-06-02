@@ -73,7 +73,7 @@ export default function SignupForm() {
             placeholder="Enter email address"
             required
             className="text-[black] placeholder:text-slate-500 bg-[#f1dcff] rounded-[0.5rem] w-full  p-[9px]"
-          />
+          />  
         </label>
 
 
