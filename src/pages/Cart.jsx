@@ -1,10 +1,11 @@
 import { useContext, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import CartItem from "../components/CartItem";
 import { AppContext } from "../Context/AppContext";
 import { NavLink } from 'react-router-dom';
 import { IoMdHeart } from 'react-icons/io';
+import { AiFillGithub } from "react-icons/ai";
 
 const Cart = () => {
   const { cart } = useSelector((state) => state);
@@ -75,7 +76,7 @@ const Cart = () => {
           </NavLink>
         </div>
         <div className="flex justify-center items-center gap-x-2 font-bold ">
-          Made With<IoMdHeart className="text-[red] text-5xl mr-2 flex " /> Dhuruv Kumar
+          Made With<IoMdHeart className="text-[red] max-[600]:text-5xl mr-4 text-2xl flex " />by Dhuruv Kumar <NavLink className='text-2xl' to='https://github.com/dhuruv0003/ShopZ-E-Commerce-Web-App'><AiFillGithub /></NavLink>
         </div>
       </footer>
     </div>

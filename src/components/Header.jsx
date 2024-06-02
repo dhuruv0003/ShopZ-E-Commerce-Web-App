@@ -1,5 +1,4 @@
 
-import { useDispatch, useSelector } from "react-redux";
 import SlideShow from "./SlideShow";
 import { useContext, useState } from "react";
 import { AppContext } from "../Context/AppContext";
