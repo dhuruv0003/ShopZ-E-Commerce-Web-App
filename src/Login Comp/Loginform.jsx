@@ -72,7 +72,7 @@ export default function Loginform() {
         </div>
 
         <button className='
-                <button className="w-full mt-4 bg-[#5f154c] rounded-[8px] font-medium pt-2 text-[#e6e6e6]'>
+                <button className="w-full mt-4 bg-[#5f154c] rounded-[8px] font-medium py-2 text-[#e6e6e6]'>
           Login
         </button>
       </form>
