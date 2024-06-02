@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import toast from 'react-hot-toast';
 import { AppContext } from '../Context/AppContext';
-import { NavLink     } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { IoMdHeart } from 'react-icons/io';
 export const ContactUs = () => {
 
@@ -44,8 +44,8 @@ export const ContactUs = () => {
                 <button className='
                w-full mt-4 bg-[#5f154c] rounded-[8px] font-medium py-2 text-[#e6e6e6]' type="submit" >Submit</button>
             </form>
-            <footer className={`${isDarkMode ? 'bg-gradient-to-r from-slate-400 to-slate-950 shadow-slate-900 shadow-lg text-white z-50 w-full ' : 'bg-gradient-to-r from-pink-100 to-indigo-500 shadow-black shadow-lg  z-50 w-full '}py-6 mt-10 flex flex-col gap-5 `}>
-                <div className="flex justify-center gap-5 items-center text-xl px-10 font-extrabold ">
+            <footer className={`${isDarkMode ? 'bg-gradient-to-r from-slate-400 to-slate-950 shadow-slate-900 shadow-lg text-white z-50 w-full fixed top-0' : 'bg-gradient-to-r from-pink-100 to-indigo-500 shadow-black shadow-lg  z-50 w-full '}max-[600px]:py-6 py-6 mt-10 flex flex-col gap-5 `}>
+                <div className="max-[600px]:flex max-[600px]:flex-col  flex justify-center max-[600px]:gap-1 gap-5 items-center text-xl px-10 font-extrabold ">
                     <NavLink to='/'>
                         Home
                     </NavLink>
