@@ -19,7 +19,7 @@ const Cart = () => {
 
   return (
 
-    <div onClick={() => setHide(true)} className={`${isDarkMode ? "bg-gradient-to-r  from-slate-500 text-white to-black " : "bg-gradient-to-r from-blue-100  to-purple-100"} pt-[7rem]`}>
+    <div onClick={() => setHide(true)} className={`${isDarkMode ? "bg-gradient-to-r  from-slate-500 text-white to-black " : "bg-gradient-to-r from-blue-100  to-purple-100"} max-[600px]:px-[1rem]  pt-[7rem]`}>
       {cart.length > 0 ? (
         <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-center ">
           <div className="w-[100%] md:w-[60%] flex flex-col p-2">
