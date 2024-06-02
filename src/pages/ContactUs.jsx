@@ -3,6 +3,9 @@ import toast from 'react-hot-toast';
 import { AppContext } from '../Context/AppContext';
 import { NavLink } from 'react-router-dom';
 import { IoMdHeart } from 'react-icons/io';
+import { AiFillGithub } from "react-icons/ai";
+
+
 export const ContactUs = () => {
 
     const { isDarkMode, setHide } = useContext(AppContext)
@@ -21,7 +24,7 @@ export const ContactUs = () => {
         toast.success("Message send");
     }
     return (
-        <div onClick={() => setHide(true)} className={`${isDarkMode ? "bg-gradient-to-r from-slate-400 to-slate-950 shadow-slate-900 300 pt-[8rem] h-full md:w-screen max-[400px]:px-[0.5rem]" : 'bg-gradient-to-r from-blue-100 to-purple-100 pt-[8rem]  h-fit  md:w-screen max-[400px]:px-[0.5rem] '}`}>
+        <div onClick={() => setHide(true)} className={`${isDarkMode ? "bg-gradient-to-r from-slate-400 to-slate-950 shadow-slate-900 300 pt-[8rem] h-full md:w-screen max-[400px]:px-[0.5rem]" : 'bg-gradient-to-r from-blue-100 to-purple-100 pt-[8rem]  h-fit  md:w-screen '}`}>
 
             <form className='mt-4 max-w-[550px] mx-auto flex flex-col gap-y-3' onSubmit={submitHandler} action="" >
                 <h1 className='text-center text-white text-3xl font-bold rounded-se-2xl rounded-ls-2xl  bg-purple-900 bg-rounded-[0.5rem] p-[19px] w-full '>Please Enter Your Queries</h1>
