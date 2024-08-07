@@ -14,6 +14,7 @@ const Cart = () => {
 
   useEffect(() => {
     setTotalAmount(cart.reduce((acc, curr) => acc + curr.price, 0));
+    // curr represents current item  in cart
   }, [cart]);
   const { isDarkMode, hide, setHide } = useContext(AppContext)
 

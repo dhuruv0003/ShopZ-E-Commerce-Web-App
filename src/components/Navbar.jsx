@@ -12,9 +12,7 @@ const Navbar = () => {
 
     const { isloggedin, setisloggedin,hide,setHide } = useContext(AppContext)
     const { isDarkMode,  toggleDarkMode } = useContext(AppContext);
-    const { cart } = useSelector((state) => state);
-
-    
+    const { cart } = useSelector((state) => state);  
 
     return (
         <div >

@@ -15,7 +15,7 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const [posts, setPosts] = useState([]);
 
-  const { isDarkMode, setHide, setDarkMode, category, toggleDarkMode } = useContext(AppContext)
+  const { isDarkMode, setHide,  category,  } = useContext(AppContext)
 
   async function fetchProductData() {
     setLoading(true);
